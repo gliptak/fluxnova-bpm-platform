@@ -151,6 +151,11 @@
               <windowtitle>Camunda Platform Javadocs ${project.version}</windowtitle>
             </configuration>
           </plugin>
+          <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>5.0.0.4389</version>
+          </plugin>
         </plugins>
       </build>
     </profile>
@@ -314,9 +319,50 @@
       </build>
     </profile>
 
+    <profile>
+      <id>sonar</id>
+      <properties>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.login>${env.SONAR_TOKEN}</sonar.login>
+        <sonar.organization>finos</sonar.organization>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <phase>prepare-package</phase>
+                <goals>
+                  <goal>prepare-agent</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>sonar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
   </profiles>
 
   <repositories>
+    <repository>
+      <id>gitlab-maven</id>
+      <url>https://gitlab.example.com/api/v4/projects/68204012/packages/maven</url>
+    </repository>
     <repository>
       <id>maven-central</id>
       <name>Maven Central</name>
@@ -373,5 +419,16 @@
     <system>Jira</system>
     <url>https://app.camunda.com/jira/browse/CAM/</url>
   </issueManagement>
+
+  <distributionManagement>
+    <repository>
+      <id>gitlab-maven</id>
+      <url>https://gitlab.example.com/api/v4/projects/68204012/packages/maven</url>
+    </repository>
+    <snapshotRepository>
+      <id>gitlab-maven</id>
+      <url>https://gitlab.example.com/api/v4/projects/68204012/packages/maven</url>
+    </snapshotRepository>
+  </distributionManagement>
 
 </project>

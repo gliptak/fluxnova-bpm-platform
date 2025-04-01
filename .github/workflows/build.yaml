@@ -1,0 +1,157 @@
+name: "Build CI"
+
+# TODO: Uncomment while pushing the code to FINOS
+#env:
+#  CI_DEPLOY_USERNAME: ${{ secrets.CI_DEPLOY_USERNAME }}
+#  CI_DEPLOY_PASSWORD: ${{ secrets.CI_DEPLOY_PASSWORD }}
+#  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+on:
+  push:
+  pull_request:
+    branches: [ "main" ]
+
+concurrency:
+  group: ${{ github.ref == 'refs/heads/main' && format('ci-default-branch-{0}-{1}', github.sha, github.workflow) ||
+    format('ci-pr-{0}-{1}', github.ref, github.workflow) }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: 21
+          distribution: 'temurin'
+          cache: 'maven'
+      # TODO : SET THE RIGHT ENVIRONMENT VARIABLES - GITHUB SECRETS (DO NOT DO THIS UNTIL WE ARE PUBLIC)
+      #          server-id: ossrh
+      #          server-username: CI_DEPLOY_USERNAME
+      #          server-password: CI_DEPLOY_PASSWORD
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-mvn-deps
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Check Java version
+        run: java -version
+
+      # TODO: UPDATE WHEN WE ARE PUBLIC AND THE RELEASE PROCESS IS TESTED LOCALLY
+      #      - name: Configure git
+      #        run: |
+      #          git config --global committer.email "infra@finos.org"
+      #          git config --global committer.name "FINOS Admin"
+      #          git config --global author.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      #          git config --global author.name "${GITHUB_ACTOR}"
+
+      - name: Download deps and plugins
+        run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
+
+      # TODO: IT DOESN'T WORK INTERNALLY - THIS IS USEFUL TO TRACK BUILD RESOURCE CONSUMPTION
+      #      - name: Collect Workflow Telemetry
+      #        uses: runforesight/workflow-telemetry-action@v1
+      #        with:
+      #          theme: dark
+
+      - name: Build + Sonar
+        if: github.ref != 'refs/heads/main'
+        env:
+          MAVEN_OPTS: "-Xmx8g"
+        run: |
+          mvn -B -e deploy -Psonar -DskipTests=true
+      # TODO: WE ARE NOT DOING DEPLOYMENT AND DOCKER YET
+      - name: Build (with Maven Deploy + Docker Snapshot + Sonar)
+        if: github.ref == 'refs/heads/main'
+        env:
+          DOCKER_USERNAME: finos
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          MAVEN_OPTS: "-Xmx8g"
+        run: |
+          mvn -B -e deploy -Psonar -DskipTests=true
+  #          -P docker-snapshot -> profile docker-snapshot doesn't exist for flowave
+
+  unit-test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: 21
+          distribution: 'temurin'
+          cache: 'maven'
+      # TODO : SET THE RIGHT ENVIRONMENT VARIABLES - GITHUB SECRETS (DO NOT DO THIS UNTIL WE ARE PUBLIC)
+      #          server-id: ossrh
+      #          server-username: CI_DEPLOY_USERNAME
+      #          server-password: CI_DEPLOY_PASSWORD
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-mvn-deps
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Unit Tests
+        env:
+          MAVEN_OPTS: "-Xmx8g"
+          MAVEN_CONFIG: ~/.m2/repository
+        run: |
+          mvn -B -e verify -DskipITs=true
+  integration-test:
+    name: Integration tests
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: 21
+          distribution: 'temurin'
+          cache: 'maven'
+      # TODO : SET THE RIGHT ENVIRONMENT VARIABLES - GITHUB SECRETS (DO NOT DO THIS UNTIL WE ARE PUBLIC)
+      #          server-id: ossrh
+      #          server-username: CI_DEPLOY_USERNAME
+      #          server-password: CI_DEPLOY_PASSWORD
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-mvn-deps
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Integration Tests
+        env:
+          MAVEN_OPTS: "-Xmx8g"
+          MAVEN_CONFIG: ~/.m2/repository
+        run: |
+          mvn clean install -f qa/pom.xml -P tomcat,engine-integration-jakarta,h2 -DargLine="-XX:MaxRAMPercentage=70.0"
