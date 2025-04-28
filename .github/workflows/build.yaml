@@ -1,5 +1,8 @@
 name: "Build CI"
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 on:
   push:
     branches:
@@ -30,8 +33,6 @@ jobs:
 
       - name: Download deps and plugins
         run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Collect Workflow Telemetry
         uses: runforesight/workflow-telemetry-action@v1
@@ -40,8 +41,6 @@ jobs:
 
       - name: Build
         uses: ./.github/actions/build-deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   unit-test:
     name: Unit Tests
@@ -56,8 +55,6 @@ jobs:
 
       - name: Unit Tests
         uses: ./.github/actions/unit-test
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   integration-test:
     name: Integration tests
@@ -72,5 +69,3 @@ jobs:
 
       - name: Integration Tests
         uses: ./.github/actions/integration-test
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
