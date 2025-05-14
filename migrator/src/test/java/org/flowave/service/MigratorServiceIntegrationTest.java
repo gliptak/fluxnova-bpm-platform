@@ -44,22 +44,24 @@ class MigratorServiceIntegrationTest {
 
     private void createMockProjectStructure() throws IOException {
         // Create pom.xml
-        String pomContent = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-                "<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n" +
-                "         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-                "         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n" +
-                "    <modelVersion>4.0.0</modelVersion>\n" +
-                "    <groupId>org.example</groupId>\n" +
-                "    <artifactId>test-project</artifactId>\n" +
-                "    <version>1.0-SNAPSHOT</version>\n" +
-                "    <dependencies>\n" +
-                "        <dependency>\n" +
-                "            <groupId>org.camunda.bpm</groupId>\n" +
-                "            <artifactId>camunda-engine</artifactId>\n" +
-                "            <version>7.15.0</version>\n" +
-                "        </dependency>\n" +
-                "    </dependencies>\n" +
-                "</project>";
+        String pomContent = """
+            <?xml version="1.0" encoding="UTF-8"?>
+            <project xmlns="http://maven.apache.org/POM/4.0.0"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+                <modelVersion>4.0.0</modelVersion>
+                <groupId>org.example</groupId>
+                <artifactId>test-project</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.camunda.bpm</groupId>
+                        <artifactId>camunda-engine</artifactId>
+                        <version>7.15.0</version>
+                    </dependency>
+                </dependencies>
+            </project>
+            """;
         Files.writeString(Path.of(projectLocation + "pom.xml"), pomContent);
 
         // Create src/main/java directory structure
@@ -67,33 +69,42 @@ class MigratorServiceIntegrationTest {
         Files.createDirectories(srcMainJava);
 
         // Create a Java file with Camunda imports
-        String javaContent = "package org.workflow.example;\n\n" +
-                "import org.camunda.bpm.engine.ProcessEngine;\n" +
-                "import org.camunda.bpm.engine.RuntimeService;\n\n" +
-                "public class CamundaService {\n" +
-                "    private final ProcessEngine processEngine;\n\n" +
-                "    public CamundaService(ProcessEngine processEngine) {\n" +
-                "        this.processEngine = processEngine;\n" +
-                "    }\n\n" +
-                "    public void startProcess(String processKey) {\n" +
-                "        RuntimeService runtimeService = processEngine.getRuntimeService();\n" +
-                "        runtimeService.startProcessInstanceByKey(processKey);\n" +
-                "    }\n" +
-                "}";
+        String javaContent = """
+            package org.workflow.example;
+            
+            import org.camunda.bpm.engine.ProcessEngine;
+            import org.camunda.bpm.engine.RuntimeService;
+            
+            public class CamundaService {
+                private final ProcessEngine processEngine;
+                
+                public CamundaService(ProcessEngine processEngine) {
+                    this.processEngine = processEngine;
+                }
+                
+                public void startProcess(String processKey) {
+                    RuntimeService runtimeService = processEngine.getRuntimeService();
+                    runtimeService.startProcessInstanceByKey(processKey);
+                }
+            }
+            """;
         Files.writeString(srcMainJava.resolve("CamundaService.java"), javaContent);
 
         // Create a BPMN file
         Path resourcesDir = Path.of(projectLocation + "src/main/resources");
         Files.createDirectories(resourcesDir);
-        String bpmnContent = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-                "<bpmn:definitions xmlns:bpmn=\"http://www.omg.org/spec/BPMN/20100524/MODEL\"\n" +
-                "                  targetNamespace=\"http://camunda.org/examples\">\n" +
-                "  <bpmn:process id=\"exampleProcess\" name=\"Example Process\" isExecutable=\"true\">\n" +
-                "    <bpmn:startEvent id=\"StartEvent_1\" camunda:initiator=\"starter\" />\n" +
-                "    <bpmn:endEvent id=\"endEvent_1\" mycamunda:initiator=\"end\" />\n" +
-                "    <bpmn:endEvent id=\"endEvent_1\" camundaprocess:initiator=\"end\" />\n" +
-                "  </bpmn:process>\n" +
-                "</bpmn:definitions>";
+        String bpmnContent = """
+                <?xml version="1.0" encoding="UTF-8"?>
+                <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                                  xmlns:camunda="http://camunda.org/schema/1.0/bpmn"
+                                  targetNamespace="http://camunda.org/examples">
+                  <bpmn:process id="exampleProcess" name="Example Process" isExecutable="true">
+                    <bpmn:startEvent id="StartEvent_1" camunda:initiator="starter" />
+                    <bpmn:endEvent id="endEvent_1" mycamunda:initiator="end"/>
+                    <bpmn:endEvent id="endEvent_1" camundaprocess:initiator="end"/>
+                  </bpmn:process>
+                </bpmn:definitions>
+                """;
         Files.writeString(resourcesDir.resolve("process.bpmn"), bpmnContent);
     }
 
