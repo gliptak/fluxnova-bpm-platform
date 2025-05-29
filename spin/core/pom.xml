@@ -2,24 +2,24 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.spin</groupId>
-    <artifactId>camunda-spin-root</artifactId>
+    <groupId>org.flowave.spin</groupId>
+    <artifactId>flowave-spin-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-spin-core</artifactId>
-  <name>camunda Spin - core</name>
+  <artifactId>flowave-spin-core</artifactId>
+  <name>flowave Spin - core</name>
 
   <dependencies>
 
     <dependency>
-      <groupId>org.camunda.commons</groupId>
-      <artifactId>camunda-commons-logging</artifactId>
+      <groupId>org.flowave.commons</groupId>
+      <artifactId>flowave-commons-logging</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.commons</groupId>
-      <artifactId>camunda-commons-utils</artifactId>
+      <groupId>org.flowave.commons</groupId>
+      <artifactId>flowave-commons-utils</artifactId>
     </dependency>
 
     <dependency>

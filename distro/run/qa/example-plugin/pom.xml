@@ -2,21 +2,21 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm.run</groupId>
-    <artifactId>camunda-bpm-run-qa</artifactId>
+    <groupId>org.flowave.bpm.run</groupId>
+    <artifactId>flowave-bpm-run-qa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>camunda-bpm-run-example-plugin</artifactId>
-  <name>Camunda Platform - Run - QA - Example Plugin</name>
+  <artifactId>flowave-bpm-run-example-plugin</artifactId>
+  <name>Flowave Platform - Run - QA - Example Plugin</name>
   <packaging>jar</packaging>
 
   <dependencies>
 
     <dependency>
-      <groupId>org.camunda.bpm.webapp</groupId>
-      <artifactId>camunda-webapp-jakarta</artifactId>
+      <groupId>org.flowave.bpm.webapp</groupId>
+      <artifactId>flowave-webapp-jakarta</artifactId>
       <classifier>classes</classifier>
     </dependency>
 

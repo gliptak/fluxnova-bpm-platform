@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <groupId>org.camunda.bpm.quarkus</groupId>
-    <artifactId>camunda-bpm-quarkus-engine-parent</artifactId>
+    <groupId>org.flowave.bpm.quarkus</groupId>
+    <artifactId>flowave-bpm-quarkus-engine-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>camunda-bpm-quarkus-engine-qa</artifactId>
-  <name>Camunda Platform - Quarkus Extension - Engine - CDI QA</name>
+  <artifactId>flowave-bpm-quarkus-engine-qa</artifactId>
+  <name>Flowave Platform - Quarkus Extension - Engine - CDI QA</name>
 
   <properties>
     <arquillian.version>1.7.0.Final</arquillian.version>
@@ -25,8 +25,8 @@
         <scope>import</scope>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-core-internal-dependencies</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-core-internal-dependencies</artifactId>
         <version>${project.version}</version>
         <scope>import</scope>
         <type>pom</type>
@@ -52,7 +52,7 @@
           </systemPropertyVariables>
 
           <dependenciesToScan>
-            <dependency>org.camunda.bpm:camunda-engine-cdi-jakarta</dependency>
+            <dependency>org.flowave.bpm:flowave-engine-cdi-jakarta</dependency>
           </dependenciesToScan>
 
           <excludes>
@@ -70,17 +70,17 @@
   </build>
 
   <dependencies>
-    <!-- Camunda dependencies -->
+    <!-- Flowave dependencies -->
 
     <dependency>
-      <groupId>org.camunda.bpm.quarkus</groupId>
-      <artifactId>camunda-bpm-quarkus-engine</artifactId>
+      <groupId>org.flowave.bpm.quarkus</groupId>
+      <artifactId>flowave-bpm-quarkus-engine</artifactId>
       <version>${project.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine-cdi-jakarta</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine-cdi-jakarta</artifactId>
       <version>${project.version}</version>
       <type>test-jar</type>
       <classifier>tests-quarkus</classifier>

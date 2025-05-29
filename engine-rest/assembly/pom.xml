@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>camunda-engine-rest</artifactId>
-  <name>Camunda Platform - engine - REST - Assembly</name>
+  <artifactId>flowave-engine-rest</artifactId>
+  <name>Flowave Platform - engine - REST - Assembly</name>
   <packaging>war</packaging>
 
   <parent>
-    <groupId>org.camunda.bpm</groupId>
-    <artifactId>camunda-engine-rest-root</artifactId>
+    <groupId>org.flowave.bpm</groupId>
+    <artifactId>flowave-engine-rest-root</artifactId>
     <relativePath>../</relativePath>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
@@ -22,23 +22,23 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine-rest-core</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine-rest-core</artifactId>
       <version>${project.version}</version>
     </dependency>
 
     <!-- dependencies only used for assemblies should be scope provided -->
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine-rest-core</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine-rest-core</artifactId>
       <version>${project.version}</version>
       <classifier>sources</classifier>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine-rest-core</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine-rest-core</artifactId>
       <version>${project.version}</version>
       <classifier>tests</classifier>
       <scope>provided</scope>
@@ -82,7 +82,7 @@
               <archive>
                 <manifestEntries>
                   <!-- module dependencies for deployment on wildfly  -->
-                  <Dependencies>org.camunda.bpm.camunda-engine,org.camunda.bpm.dmn.camunda-engine-dmn,org.camunda.commons.camunda-commons-logging,org.camunda.spin.camunda-spin-core,org.camunda.bpm.juel.camunda-juel services,org.graalvm.js.js-scriptengine services</Dependencies>
+                  <Dependencies>org.flowave.bpm.flowave-engine,org.flowave.bpm.dmn.flowave-engine-dmn,org.flowave.commons.flowave-commons-logging,org.flowave.spin.flowave-spin-core,org.flowave.bpm.juel.flowave-juel services,org.graalvm.js.js-scriptengine services</Dependencies>
                 </manifestEntries>
               </archive>
               <descriptors>

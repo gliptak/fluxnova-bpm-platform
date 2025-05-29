@@ -2,16 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <name>Camunda Platform - Java External Task Client - ROOT</name>
+  <name>Flowave Platform - Java External Task Client - ROOT</name>
 
-  <artifactId>camunda-external-task-client-root</artifactId>
+  <artifactId>flowave-external-task-client-root</artifactId>
   <inceptionYear>2018</inceptionYear>
 
   <packaging>pom</packaging>
 
   <parent>
-    <groupId>org.camunda.bpm</groupId>
-    <artifactId>camunda-database-settings</artifactId>
+    <groupId>org.flowave.bpm</groupId>
+    <artifactId>flowave-database-settings</artifactId>
     <relativePath>../../database</relativePath>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
@@ -24,20 +24,13 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-bom</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-bom</artifactId>
         <version>${project.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
-
-  <scm>
-    <url>http://github.com/camunda/camunda-external-task-client-java</url>
-    <connection>scm:git:git@github.com:camunda/camunda-external-task-client-java.git</connection>
-    <developerConnection>scm:git:git@github.com:camunda/camunda-external-task-client-java.git</developerConnection>
-    <tag>7.23.0</tag>
-  </scm>
 
 </project>

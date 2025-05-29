@@ -2,14 +2,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm.qa</groupId>
-    <artifactId>camunda-qa</artifactId>
+    <groupId>org.flowave.bpm.qa</groupId>
+    <artifactId>flowave-qa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-qa-old-engine</artifactId>
+  <artifactId>flowave-qa-old-engine</artifactId>
   <packaging>jar</packaging>
-  <name>Camunda Platform - QA - test new schema with old engine</name>
+  <name>Flowave Platform - QA - test new schema with old engine</name>
 
   <properties>
     <camunda.old.engine.version>7.22.0</camunda.old.engine.version>
@@ -77,8 +77,8 @@
       <dependencyManagement>
         <dependencies>
           <dependency>
-            <groupId>org.camunda.bpm</groupId>
-            <artifactId>camunda-bom</artifactId>
+            <groupId>org.flowave.bpm</groupId>
+            <artifactId>flowave-bom</artifactId>
             <!-- Cannot use variables due to bug in Maven Release Plugin -->
             <version>7.22.0</version>
             <scope>import</scope>
@@ -174,15 +174,15 @@
         </dependency>
 
         <dependency>
-          <groupId>org.camunda.bpm.distro</groupId>
-          <artifactId>camunda-sql-scripts</artifactId>
+          <groupId>org.flowave.bpm.distro</groupId>
+          <artifactId>flowave-sql-scripts</artifactId>
           <version>${project.version}</version>
           <type>test-jar</type>
         </dependency>
 
         <dependency>
-          <groupId>org.camunda.bpm</groupId>
-          <artifactId>camunda-engine</artifactId>
+          <groupId>org.flowave.bpm</groupId>
+          <artifactId>flowave-engine</artifactId>
           <scope>test</scope>
         </dependency>
         <dependency>
@@ -206,8 +206,8 @@
         </dependency>
 
         <dependency>
-          <groupId>org.camunda.commons</groupId>
-          <artifactId>camunda-commons-testing</artifactId>
+          <groupId>org.flowave.commons</groupId>
+          <artifactId>flowave-commons-testing</artifactId>
           <scope>test</scope>
         </dependency>
 
@@ -268,8 +268,8 @@
                 <configuration>
                   <artifactItems>
                     <artifactItem>
-                      <groupId>org.camunda.bpm</groupId>
-                      <artifactId>camunda-engine</artifactId>
+                      <groupId>org.flowave.bpm</groupId>
+                      <artifactId>flowave-engine</artifactId>
                       <version>${camunda.old.engine.version}</version>
                       <type>test-jar</type>
                       <outputDirectory>${project.build.directory}/test-classes</outputDirectory>
@@ -288,8 +288,8 @@
                 <configuration>
                   <artifactItems>
                     <artifactItem>
-                      <groupId>org.camunda.bpm.distro</groupId>
-                      <artifactId>camunda-sql-scripts</artifactId>
+                      <groupId>org.flowave.bpm.distro</groupId>
+                      <artifactId>flowave-sql-scripts</artifactId>
                       <version>${project.version}</version>
                       <type>test-jar</type>
                       <outputDirectory>${project.build.directory}/scripts-current</outputDirectory>

@@ -3,18 +3,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm</groupId>
-    <artifactId>camunda-bom-root</artifactId>
+    <groupId>org.flowave.bpm</groupId>
+    <artifactId>flowave-bom-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>../</relativePath>
   </parent>
 
-  <artifactId>camunda-bom</artifactId>
+  <artifactId>flowave-bom</artifactId>
   <packaging>pom</packaging>
-  <name>Camunda Platform - Bom</name>
-  <url>http://camunda.org</url>
+  <name>Flowave Platform - Bom</name>
 
-  <description>Camunda Platform bill of material</description>
+  <description>Flowave Platform bill of material</description>
 
   <licenses>
     <license>
@@ -23,10 +22,6 @@
     </license>
   </licenses>
 
-  <organization>
-    <name>camunda services GmbH</name>
-    <url>http://www.camunda.com</url>
-  </organization>
 
   <dependencyManagement>
     <dependencies>
@@ -46,10 +41,10 @@
         <artifactId>java-uuid-generator</artifactId>
         <version>${version.uuid-generator}</version>
       </dependency>
-      <!-- Camunda Platform public artifacts -->
+      <!-- Flowave Platform public artifacts -->
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-only-bom</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-only-bom</artifactId>
         <version>${project.version}</version>
         <scope>import</scope>
         <type>pom</type>

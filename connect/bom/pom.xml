@@ -4,53 +4,46 @@
   <!-- HEADS-UP: Do not use camunda-parent as parent,
   it would introduce a cyclic dependency to this bom -->
   <parent>
-    <groupId>org.camunda.bpm</groupId>
-    <artifactId>camunda-root</artifactId>
+    <groupId>org.flowave.bpm</groupId>
+    <artifactId>flowave-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
-  <groupId>org.camunda.connect</groupId>
-  <artifactId>camunda-connect-bom</artifactId>
+  <groupId>org.flowave.connect</groupId>
+  <artifactId>flowave-connect-bom</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>Camunda Platform - connect - bom</name>
+  <name>Flowave Platform - connect - bom</name>
   <packaging>pom</packaging>
 
   <dependencyManagement>
     <dependencies>
 
       <dependency>
-        <groupId>org.camunda.connect</groupId>
-        <artifactId>camunda-connect-core</artifactId>
+        <groupId>org.flowave.connect</groupId>
+        <artifactId>flowave-connect-core</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.camunda.connect</groupId>
-        <artifactId>camunda-connect-http-client</artifactId>
+        <groupId>org.flowave.connect</groupId>
+        <artifactId>flowave-connect-http-client</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.camunda.connect</groupId>
-        <artifactId>camunda-connect-soap-http-client</artifactId>
+        <groupId>org.flowave.connect</groupId>
+        <artifactId>flowave-connect-soap-http-client</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.camunda.connect</groupId>
-        <artifactId>camunda-connect-connectors-all</artifactId>
+        <groupId>org.flowave.connect</groupId>
+        <artifactId>flowave-connect-connectors-all</artifactId>
         <version>${project.version}</version>
       </dependency>
 
     </dependencies>
   </dependencyManagement>
-
-  <scm>
-    <url>https://github.com/camunda/camunda-bpm-platform</url>
-    <connection>scm:git:git@github.com:camunda/camunda-bpm-platform.git</connection>
-    <developerConnection>scm:git:git@github.com:camunda/camunda-bpm-platform.git</developerConnection>
-    <tag>7.23.0</tag>
-  </scm>
 
 </project>

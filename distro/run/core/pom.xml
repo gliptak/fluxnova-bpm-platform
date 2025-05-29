@@ -3,14 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm.run</groupId>
-    <artifactId>camunda-bpm-run-root</artifactId>
+    <groupId>org.flowave.bpm.run</groupId>
+    <artifactId>flowave-bpm-run-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>camunda-bpm-run-core</artifactId>
-  <name>Camunda Platform - Run - Core</name>
+  <artifactId>flowave-bpm-run-core</artifactId>
+  <name>Flowave Platform - Run - Core</name>
   <packaging>jar</packaging>
 
   <properties>
@@ -25,33 +25,33 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.camunda.bpm.springboot</groupId>
-      <artifactId>camunda-bpm-spring-boot-starter</artifactId>
+      <groupId>org.flowave.bpm.springboot</groupId>
+      <artifactId>flowave-bpm-spring-boot-starter</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine-plugin-spin</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine-plugin-spin</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine-plugin-connect</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine-plugin-connect</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.spin</groupId>
-      <artifactId>camunda-spin-dataformat-all</artifactId>
+      <groupId>org.flowave.spin</groupId>
+      <artifactId>flowave-spin-dataformat-all</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm.identity</groupId>
-      <artifactId>camunda-identity-ldap</artifactId>
+      <groupId>org.flowave.bpm.identity</groupId>
+      <artifactId>flowave-identity-ldap</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm.springboot</groupId>
-      <artifactId>camunda-bpm-spring-boot-starter-rest</artifactId>
+      <groupId>org.flowave.bpm.springboot</groupId>
+      <artifactId>flowave-bpm-spring-boot-starter-rest</artifactId>
     </dependency>
 
     <dependency>
@@ -132,8 +132,8 @@
           <layout>ZIP</layout>
           <excludes>
             <exclude>
-              <groupId>org.camunda.bpm.springboot</groupId>
-              <artifactId>camunda-bpm-spring-boot-starter-rest</artifactId>
+              <groupId>org.flowave.bpm.springboot</groupId>
+              <artifactId>flowave-bpm-spring-boot-starter-rest</artifactId>
             </exclude>
           </excludes>
         </configuration>

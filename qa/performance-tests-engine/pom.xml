@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>camunda-qa-performance-tests-engine</artifactId>
+  <artifactId>flowave-qa-performance-tests-engine</artifactId>
   <packaging>jar</packaging>
-  <name>Camunda Platform - QA Performance Tests Engine</name>
+  <name>Flowave Platform - QA Performance Tests Engine</name>
 
   <parent>
-    <groupId>org.camunda.bpm.qa</groupId>
-    <artifactId>camunda-qa</artifactId>
+    <groupId>org.flowave.bpm.qa</groupId>
+    <artifactId>flowave-qa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
@@ -20,8 +20,8 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine</artifactId>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

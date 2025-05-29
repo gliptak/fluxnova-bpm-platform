@@ -2,13 +2,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.commons</groupId>
-    <artifactId>camunda-commons-root</artifactId>
+    <groupId>org.flowave.commons</groupId>
+    <artifactId>flowave-commons-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-commons-logging</artifactId>
-  <name>camunda Commons - Logging</name>
+  <artifactId>flowave-commons-logging</artifactId>
+  <name>flowave Commons - Logging</name>
   <packaging>jar</packaging>
 
   <dependencies>

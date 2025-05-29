@@ -2,15 +2,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm</groupId>
-    <artifactId>camunda-parent</artifactId>
+    <groupId>org.flowave.bpm</groupId>
+    <artifactId>flowave-parent</artifactId>
     <relativePath>../parent</relativePath>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.camunda.connect</groupId>
-  <artifactId>camunda-connect-root</artifactId>
-  <name>Camunda Platform - connect - root</name>
+  <groupId>org.flowave.connect</groupId>
+  <artifactId>flowave-connect-root</artifactId>
+  <name>Flowave Platform - connect - root</name>
   <inceptionYear>2014</inceptionYear>
   <packaging>pom</packaging>
 
@@ -132,12 +132,5 @@
       </build>
     </profile>
   </profiles>
-
-  <scm>
-    <url>https://github.com/camunda/camunda-bpm-platform</url>
-    <connection>scm:git:git@github.com:camunda/camunda-bpm-platform.git</connection>
-    <developerConnection>scm:git:git@github.com:camunda/camunda-bpm-platform.git</developerConnection>
-    <tag>7.23.0</tag>
-  </scm>
 
 </project>

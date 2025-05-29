@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>camunda-qa-tomcat9-runtime</artifactId>
+  <artifactId>flowave-qa-tomcat9-runtime</artifactId>
   <packaging>pom</packaging>
 
-  <name>Camunda Platform - QA Tomcat 9 Test Runtime</name>
+  <name>Flowave Platform - QA Tomcat 9 Test Runtime</name>
 
   <parent>
-    <groupId>org.camunda.bpm.qa</groupId>
-    <artifactId>camunda-qa</artifactId>
+    <groupId>org.flowave.bpm.qa</groupId>
+    <artifactId>flowave-qa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
@@ -36,8 +36,8 @@
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm.qa</groupId>
-      <artifactId>camunda-qa-ensure-clean-db</artifactId>
+      <groupId>org.flowave.bpm.qa</groupId>
+      <artifactId>flowave-qa-ensure-clean-db</artifactId>
       <version>${project.version}</version>
       <scope>runtime</scope>
     </dependency>
@@ -112,8 +112,8 @@
         </dependency>
 
         <dependency>
-          <groupId>org.camunda.bpm</groupId>
-          <artifactId>camunda-engine</artifactId>
+          <groupId>org.flowave.bpm</groupId>
+          <artifactId>flowave-engine</artifactId>
           <exclusions>
             <exclusion>
               <groupId>org.springframework</groupId>
@@ -127,53 +127,53 @@
         </dependency>
 
         <dependency>
-          <groupId>org.camunda.bpm.identity</groupId>
-          <artifactId>camunda-identity-ldap</artifactId>
+          <groupId>org.flowave.bpm.identity</groupId>
+          <artifactId>flowave-identity-ldap</artifactId>
         </dependency>
 
         <dependency>
-          <groupId>org.camunda.spin</groupId>
-          <artifactId>camunda-spin-core</artifactId>
+          <groupId>org.flowave.spin</groupId>
+          <artifactId>flowave-spin-core</artifactId>
         </dependency>
 
         <dependency>
-          <groupId>org.camunda.bpm</groupId>
-          <artifactId>camunda-engine-plugin-spin</artifactId>
+          <groupId>org.flowave.bpm</groupId>
+          <artifactId>flowave-engine-plugin-spin</artifactId>
         </dependency>
 
         <dependency>
-          <groupId>org.camunda.spin</groupId>
-          <artifactId>camunda-spin-dataformat-all</artifactId>
+          <groupId>org.flowave.spin</groupId>
+          <artifactId>flowave-spin-dataformat-all</artifactId>
         </dependency>
 
         <dependency>
-          <groupId>org.camunda.connect</groupId>
-          <artifactId>camunda-connect-core</artifactId>
+          <groupId>org.flowave.connect</groupId>
+          <artifactId>flowave-connect-core</artifactId>
         </dependency>
 
         <dependency>
-          <groupId>org.camunda.bpm</groupId>
-          <artifactId>camunda-engine-plugin-connect</artifactId>
+          <groupId>org.flowave.bpm</groupId>
+          <artifactId>flowave-engine-plugin-connect</artifactId>
         </dependency>
 
         <dependency>
-          <groupId>org.camunda.connect</groupId>
-          <artifactId>camunda-connect-connectors-all</artifactId>
+          <groupId>org.flowave.connect</groupId>
+          <artifactId>flowave-connect-connectors-all</artifactId>
           <exclusions>
             <exclusion>
-              <groupId>org.camunda.connect</groupId>
-              <artifactId>camunda-connect-http-client</artifactId>
+              <groupId>org.flowave.connect</groupId>
+              <artifactId>flowave-connect-http-client</artifactId>
             </exclusion>
             <exclusion>
-              <groupId>org.camunda.connect</groupId>
-              <artifactId>camunda-connect-soap-http-client</artifactId>
+              <groupId>org.flowave.connect</groupId>
+              <artifactId>flowave-connect-soap-http-client</artifactId>
             </exclusion>
           </exclusions>
         </dependency>
 
         <dependency>
-          <groupId>org.camunda.template-engines</groupId>
-          <artifactId>camunda-template-engines-freemarker</artifactId>
+          <groupId>org.flowave.template-engines</groupId>
+          <artifactId>flowave-template-engines-freemarker</artifactId>
         </dependency>
 
         <dependency>

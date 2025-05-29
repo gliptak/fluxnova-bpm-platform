@@ -3,14 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm.run</groupId>
-    <artifactId>camunda-bpm-run-root</artifactId>
+    <groupId>org.flowave.bpm.run</groupId>
+    <artifactId>flowave-bpm-run-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>camunda-bpm-run-qa</artifactId>
-  <name>Camunda Platform - Run - QA</name>
+  <artifactId>flowave-bpm-run-qa</artifactId>
+  <name>Flowave Platform - Run - QA</name>
   <packaging>pom</packaging>
 
   <properties>

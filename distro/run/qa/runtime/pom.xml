@@ -3,14 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm.run</groupId>
-    <artifactId>camunda-bpm-run-qa</artifactId>
+    <groupId>org.flowave.bpm.run</groupId>
+    <artifactId>flowave-bpm-run-qa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>camunda-bpm-run-qa-runtime</artifactId>
-  <name>Camunda Platform - Run - QA - Runtime</name>
+  <artifactId>flowave-bpm-run-qa-runtime</artifactId>
+  <name>Flowave Platform - Run - QA - Runtime</name>
   <packaging>jar</packaging>
   
   <properties>
@@ -21,8 +21,8 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.camunda.bpm.run</groupId>
-      <artifactId>camunda-bpm-run</artifactId>
+      <groupId>org.flowave.bpm.run</groupId>
+      <artifactId>flowave-bpm-run</artifactId>
       <version>${project.version}</version>
       <type>zip</type>
       <scope>test</scope>
@@ -37,8 +37,8 @@
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm.run</groupId>
-      <artifactId>camunda-bpm-run-qa-integration-tests</artifactId>
+      <groupId>org.flowave.bpm.run</groupId>
+      <artifactId>flowave-bpm-run-qa-integration-tests</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
       <classifier>tests</classifier>
@@ -91,14 +91,14 @@
 
     <!-- Webapps -->
     <dependency>
-      <groupId>org.camunda.bpm.qa</groupId>
-      <artifactId>camunda-qa-integration-tests-webapps</artifactId>
+      <groupId>org.flowave.bpm.qa</groupId>
+      <artifactId>flowave-qa-integration-tests-webapps</artifactId>
       <version>${project.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm.model</groupId>
-      <artifactId>camunda-bpmn-model</artifactId>
+      <groupId>org.flowave.bpm.model</groupId>
+      <artifactId>flowave-bpmn-model</artifactId>
       <scope>test</scope>
     </dependency>
 
@@ -147,7 +147,7 @@
             <configuration>
               <redirectTestOutputToFile>true</redirectTestOutputToFile>
               <dependenciesToScan>
-                <dependenciesToScan>org.camunda.bpm.run:camunda-bpm-run-qa-integration-tests</dependenciesToScan>
+                <dependenciesToScan>org.flowave.bpm.run:flowave-bpm-run-qa-integration-tests</dependenciesToScan>
               </dependenciesToScan>
               <systemPropertyVariables>
                 <camunda.run.home>${run-home}</camunda.run.home>
@@ -175,7 +175,7 @@
                 </goals>
                 <phase>generate-test-resources</phase>
                 <configuration>
-                  <includeArtifactIds>camunda-bpm-run</includeArtifactIds>
+                  <includeArtifactIds>flowave-bpm-run</includeArtifactIds>
                   <overWriteSnapshots>true</overWriteSnapshots>
                   <excludeTransitive>true</excludeTransitive>
                   <outputDirectory>${run-home}</outputDirectory>
@@ -195,7 +195,7 @@
                 </goals>
                 <phase>generate-test-resources</phase>
                 <configuration>
-                  <artifact>org.camunda.bpm.run:camunda-bpm-run-example-plugin:${project.version}</artifact>
+                  <artifact>org.flowave.bpm.run:flowave-bpm-run-example-plugin:${project.version}</artifact>
                   <overWriteSnapshots>true</overWriteSnapshots>
                   <stripVersion>true</stripVersion>
                   <outputDirectory>${example-plugin-home}</outputDirectory>

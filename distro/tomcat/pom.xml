@@ -2,23 +2,23 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm</groupId>
-    <artifactId>camunda-database-settings</artifactId>
+    <groupId>org.flowave.bpm</groupId>
+    <artifactId>flowave-database-settings</artifactId>
     <relativePath>../../database</relativePath>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-tomcat</artifactId>
-  <groupId>org.camunda.bpm.tomcat</groupId>
+  <artifactId>flowave-tomcat</artifactId>
+  <groupId>org.flowave.bpm.tomcat</groupId>
   <packaging>pom</packaging>
 
-  <name>Camunda Platform - tomcat</name>
+  <name>Flowave Platform - tomcat</name>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-core-internal-dependencies</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-core-internal-dependencies</artifactId>
         <version>${project.version}</version>
         <scope>import</scope>
         <type>pom</type>

@@ -2,19 +2,19 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.commons</groupId>
-    <artifactId>camunda-commons-root</artifactId>
+    <groupId>org.flowave.commons</groupId>
+    <artifactId>flowave-commons-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-commons-utils</artifactId>
-  <name>camunda Commons - Utils</name>
+  <artifactId>flowave-commons-utils</artifactId>
+  <name>flowave Commons - Utils</name>
   <packaging>jar</packaging>
 
   <dependencies>
     <dependency>
-      <groupId>org.camunda.commons</groupId>
-      <artifactId>camunda-commons-logging</artifactId>
+      <groupId>org.flowave.commons</groupId>
+      <artifactId>flowave-commons-logging</artifactId>
       <version>${project.version}</version>
     </dependency>
 

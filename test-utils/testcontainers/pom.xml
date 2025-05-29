@@ -2,14 +2,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm</groupId>
-    <artifactId>camunda-database-settings</artifactId>
+    <groupId>org.flowave.bpm</groupId>
+    <artifactId>flowave-database-settings</artifactId>
     <relativePath>../../database</relativePath>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-test-utils-testcontainers</artifactId>
-  <name>Camunda Test Utils - Testcontainers</name>
+  <artifactId>flowave-test-utils-testcontainers</artifactId>
+  <name>Flowave Test Utils - Testcontainers</name>
   <packaging>jar</packaging>
 
   <properties>
@@ -19,8 +19,8 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-core-internal-dependencies</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-core-internal-dependencies</artifactId>
         <version>${project.version}</version>
         <scope>import</scope>
         <type>pom</type>

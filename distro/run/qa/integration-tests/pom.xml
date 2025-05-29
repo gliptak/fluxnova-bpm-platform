@@ -3,14 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm.run</groupId>
-    <artifactId>camunda-bpm-run-qa</artifactId>
+    <groupId>org.flowave.bpm.run</groupId>
+    <artifactId>flowave-bpm-run-qa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>camunda-bpm-run-qa-integration-tests</artifactId>
-  <name>Camunda Platform - Run - QA - Integration Tests</name>
+  <artifactId>flowave-bpm-run-qa-integration-tests</artifactId>
+  <name>Flowave Platform - Run - QA - Integration Tests</name>
   <packaging>jar</packaging>
 
   <dependencies>
@@ -62,14 +62,14 @@
 
     <!-- Webapps -->
     <dependency>
-      <groupId>org.camunda.bpm.qa</groupId>
-      <artifactId>camunda-qa-integration-tests-webapps</artifactId>
+      <groupId>org.flowave.bpm.qa</groupId>
+      <artifactId>flowave-qa-integration-tests-webapps</artifactId>
       <version>${project.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm.model</groupId>
-      <artifactId>camunda-bpmn-model</artifactId>
+      <groupId>org.flowave.bpm.model</groupId>
+      <artifactId>flowave-bpmn-model</artifactId>
       <scope>test</scope>
     </dependency>
 

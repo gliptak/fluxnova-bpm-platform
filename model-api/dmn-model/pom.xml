@@ -2,16 +2,16 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm.model</groupId>
-    <artifactId>camunda-model-apis</artifactId>
+    <groupId>org.flowave.bpm.model</groupId>
+    <artifactId>flowave-model-apis</artifactId>
     <relativePath>../</relativePath>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-dmn-model</artifactId>
+  <artifactId>flowave-dmn-model</artifactId>
   <packaging>jar</packaging>
 
-  <name>Camunda Platform - DMN Model API</name>
+  <name>Flowave Platform - DMN Model API</name>
   <inceptionYear>2015</inceptionYear>
   <properties>
     <camunda.artifact>org.camunda.bpm.model.dmn</camunda.artifact>
@@ -23,8 +23,8 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.camunda.bpm.model</groupId>
-      <artifactId>camunda-xml-model</artifactId>
+      <groupId>org.flowave.bpm.model</groupId>
+      <artifactId>flowave-xml-model</artifactId>
     </dependency>
 
     <dependency>
@@ -46,8 +46,8 @@
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-bpm-archunit</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-bpm-archunit</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
@@ -79,7 +79,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
           <dependenciesToScan>
-            <dependency>org.camunda.bpm:camunda-bpm-archunit</dependency>
+            <dependency>org.flowave.bpm:flowave-bpm-archunit</dependency>
           </dependenciesToScan>
         </configuration>
       </plugin>

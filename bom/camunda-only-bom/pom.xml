@@ -3,18 +3,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm</groupId>
-    <artifactId>camunda-bom-root</artifactId>
+    <groupId>org.flowave.bpm</groupId>
+    <artifactId>flowave-bom-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>../</relativePath>
   </parent>
 
-  <artifactId>camunda-only-bom</artifactId>
+  <artifactId>flowave-only-bom</artifactId>
   <packaging>pom</packaging>
-  <name>Camunda Platform Only - Bom</name>
-  <url>http://camunda.org</url>
+  <name>Flowave Platform Only - Bom</name>
 
-  <description>Camunda Platform Only bill of material</description>
+  <description>Flowave Platform Only bill of material</description>
 
   <licenses>
     <license>
@@ -23,214 +22,209 @@
     </license>
   </licenses>
 
-  <organization>
-    <name>camunda services GmbH</name>
-    <url>http://www.camunda.com</url>
-  </organization>
-
   <dependencyManagement>
     <dependencies>
-      <!-- Camunda Platform public artifacts -->
+      <!-- Flowave Platform public artifacts -->
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-engine</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-engine</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-engine-cdi</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-engine-cdi</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-engine-cdi-jakarta</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-engine-cdi-jakarta</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-engine-spring</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-engine-spring</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-engine-spring-6</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-engine-spring-6</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-engine-rest-core</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-engine-rest-core</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-engine-rest-core-jakarta</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-engine-rest-core-jakarta</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.identity</groupId>
-        <artifactId>camunda-identity-ldap</artifactId>
+        <groupId>org.flowave.bpm.identity</groupId>
+        <artifactId>flowave-identity-ldap</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-engine-plugin-spin</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-engine-plugin-spin</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-engine-plugin-connect</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-engine-plugin-connect</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.javaee</groupId>
-        <artifactId>camunda-ejb-client</artifactId>
+        <groupId>org.flowave.bpm.javaee</groupId>
+        <artifactId>flowave-ejb-client</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.javaee</groupId>
-        <artifactId>camunda-ejb-client-jakarta</artifactId>
+        <groupId>org.flowave.bpm.javaee</groupId>
+        <artifactId>flowave-ejb-client-jakarta</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.juel</groupId>
-        <artifactId>camunda-juel</artifactId>
+        <groupId>org.flowave.bpm.juel</groupId>
+        <artifactId>flowave-juel</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.model</groupId>
-        <artifactId>camunda-xml-model</artifactId>
+        <groupId>org.flowave.bpm.model</groupId>
+        <artifactId>flowave-xml-model</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.model</groupId>
-        <artifactId>camunda-bpmn-model</artifactId>
+        <groupId>org.flowave.bpm.model</groupId>
+        <artifactId>flowave-bpmn-model</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.model</groupId>
-        <artifactId>camunda-cmmn-model</artifactId>
+        <groupId>org.flowave.bpm.model</groupId>
+        <artifactId>flowave-cmmn-model</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.model</groupId>
-        <artifactId>camunda-dmn-model</artifactId>
+        <groupId>org.flowave.bpm.model</groupId>
+        <artifactId>flowave-dmn-model</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-engine-rest</artifactId>
-        <version>${project.version}</version>
-        <classifier>classes</classifier>
-      </dependency>
-      <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-engine-rest-jakarta</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-engine-rest</artifactId>
         <version>${project.version}</version>
         <classifier>classes</classifier>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.webapp</groupId>
-        <artifactId>camunda-webapp-webjar</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-engine-rest-jakarta</artifactId>
+        <version>${project.version}</version>
+        <classifier>classes</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.flowave.bpm.webapp</groupId>
+        <artifactId>flowave-webapp-webjar</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.webapp</groupId>
-        <artifactId>camunda-webapp</artifactId>
+        <groupId>org.flowave.bpm.webapp</groupId>
+        <artifactId>flowave-webapp</artifactId>
         <version>${project.version}</version>
         <type>war</type>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.webapp</groupId>
-        <artifactId>camunda-webapp-jakarta</artifactId>
+        <groupId>org.flowave.bpm.webapp</groupId>
+        <artifactId>flowave-webapp-jakarta</artifactId>
         <version>${project.version}</version>
         <type>war</type>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.webapp</groupId>
-        <artifactId>camunda-webapp</artifactId>
+        <groupId>org.flowave.bpm.webapp</groupId>
+        <artifactId>flowave-webapp</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
         <classifier>classes</classifier>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.webapp</groupId>
-        <artifactId>camunda-webapp-jakarta</artifactId>
+        <groupId>org.flowave.bpm.webapp</groupId>
+        <artifactId>flowave-webapp-jakarta</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
         <classifier>classes</classifier>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.webapp</groupId>
-        <artifactId>camunda-webapp-webjar-ee</artifactId>
+        <groupId>org.flowave.bpm.webapp</groupId>
+        <artifactId>flowave-webapp-webjar-ee</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.springboot</groupId>
-        <artifactId>camunda-bpm-spring-boot-starter</artifactId>
+        <groupId>org.flowave.bpm.springboot</groupId>
+        <artifactId>flowave-bpm-spring-boot-starter</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.springboot</groupId>
-        <artifactId>camunda-bpm-spring-boot-starter-rest</artifactId>
+        <groupId>org.flowave.bpm.springboot</groupId>
+        <artifactId>flowave-bpm-spring-boot-starter-rest</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.springboot</groupId>
-        <artifactId>camunda-bpm-spring-boot-starter-webapp</artifactId>
+        <groupId>org.flowave.bpm.springboot</groupId>
+        <artifactId>flowave-bpm-spring-boot-starter-webapp</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.springboot</groupId>
-        <artifactId>camunda-bpm-spring-boot-starter-security</artifactId>
+        <groupId>org.flowave.bpm.springboot</groupId>
+        <artifactId>flowave-bpm-spring-boot-starter-security</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.springboot</groupId>
-        <artifactId>camunda-bpm-spring-boot-starter-webapp-ee</artifactId>
+        <groupId>org.flowave.bpm.springboot</groupId>
+        <artifactId>flowave-bpm-spring-boot-starter-webapp-ee</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.springboot</groupId>
-        <artifactId>camunda-bpm-spring-boot-starter-test</artifactId>
+        <groupId>org.flowave.bpm.springboot</groupId>
+        <artifactId>flowave-bpm-spring-boot-starter-test</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.quarkus</groupId>
-        <artifactId>camunda-bpm-quarkus-engine</artifactId>
+        <groupId>org.flowave.bpm.quarkus</groupId>
+        <artifactId>flowave-bpm-quarkus-engine</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-bpm-junit5</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-bpm-junit5</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-bpm-assert</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-bpm-assert</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.spin</groupId>
-        <artifactId>camunda-spin-bom</artifactId>
-        <version>${project.version}</version>
-        <scope>import</scope>
-        <type>pom</type>
-      </dependency>
-      <dependency>
-        <groupId>org.camunda.commons</groupId>
-        <artifactId>camunda-commons-bom</artifactId>
+        <groupId>org.flowave.spin</groupId>
+        <artifactId>flowave-spin-bom</artifactId>
         <version>${project.version}</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
       <dependency>
-        <groupId>org.camunda.template-engines</groupId>
-        <artifactId>camunda-template-engines-freemarker</artifactId>
+        <groupId>org.flowave.commons</groupId>
+        <artifactId>flowave-commons-bom</artifactId>
+        <version>${project.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>org.flowave.template-engines</groupId>
+        <artifactId>flowave-template-engines-freemarker</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.connect</groupId>
-        <artifactId>camunda-connect-bom</artifactId>
+        <groupId>org.flowave.connect</groupId>
+        <artifactId>flowave-connect-bom</artifactId>
         <version>${project.version}</version>
         <scope>import</scope>
         <type>pom</type>
@@ -239,40 +233,40 @@
       <!-- dmn engine dependencies
        -->
       <dependency>
-        <groupId>org.camunda.bpm.dmn</groupId>
-        <artifactId>camunda-engine-dmn</artifactId>
+        <groupId>org.flowave.bpm.dmn</groupId>
+        <artifactId>flowave-engine-dmn</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.dmn</groupId>
-        <artifactId>camunda-engine-feel-api</artifactId>
+        <groupId>org.flowave.bpm.dmn</groupId>
+        <artifactId>flowave-engine-feel-api</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.dmn</groupId>
-        <artifactId>camunda-engine-feel-juel</artifactId>
+        <groupId>org.flowave.bpm.dmn</groupId>
+        <artifactId>flowave-engine-feel-juel</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.dmn</groupId>
-        <artifactId>camunda-engine-feel-scala</artifactId>
+        <groupId>org.flowave.bpm.dmn</groupId>
+        <artifactId>flowave-engine-feel-scala</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <!-- Java External Task Client -->
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-external-task-client</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-external-task-client</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-external-task-client-spring</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-external-task-client-spring</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm.springboot</groupId>
-        <artifactId>camunda-bpm-spring-boot-starter-external-task-client</artifactId>
+        <groupId>org.flowave.bpm.springboot</groupId>
+        <artifactId>flowave-bpm-spring-boot-starter-external-task-client</artifactId>
         <version>${project.version}</version>
       </dependency>
     </dependencies>

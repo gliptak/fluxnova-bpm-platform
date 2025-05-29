@@ -2,13 +2,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.commons</groupId>
-    <artifactId>camunda-commons-root</artifactId>
+    <groupId>org.flowave.commons</groupId>
+    <artifactId>flowave-commons-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-commons-testing</artifactId>
-  <name>camunda Commons - Testing</name>
+  <artifactId>flowave-commons-testing</artifactId>
+  <name>flowave Commons - Testing</name>
   <packaging>jar</packaging>
 
   <dependencies>
@@ -30,8 +30,8 @@
 
     <!-- TEST -->
     <dependency>
-      <groupId>org.camunda.commons</groupId>
-      <artifactId>camunda-commons-logging</artifactId>
+      <groupId>org.flowave.commons</groupId>
+      <artifactId>flowave-commons-logging</artifactId>
       <scope>test</scope>
     </dependency>
 

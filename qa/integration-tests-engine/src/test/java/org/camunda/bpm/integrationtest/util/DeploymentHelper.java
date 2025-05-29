@@ -20,9 +20,9 @@ import org.jboss.shrinkwrap.api.spec.JavaArchive;
 
 public class DeploymentHelper extends AbstractDeploymentHelper {
 
-  protected static final String CAMUNDA_EJB_CLIENT = "org.camunda.bpm.javaee:camunda-ejb-client";
-  protected static final String CAMUNDA_ENGINE_CDI = "org.camunda.bpm:camunda-engine-cdi";
-  protected static final String CAMUNDA_ENGINE_SPRING = "org.camunda.bpm:camunda-engine-spring";
+  protected static final String CAMUNDA_EJB_CLIENT = "org.flowave.bpm.javaee:flowave-ejb-client";
+  protected static final String CAMUNDA_ENGINE_CDI = "org.flowave.bpm:flowave-engine-cdi";
+  protected static final String CAMUNDA_ENGINE_SPRING = "org.flowave.bpm:flowave-engine-spring";
 
   public static JavaArchive getEjbClient() {
     return getEjbClient(CAMUNDA_EJB_CLIENT);

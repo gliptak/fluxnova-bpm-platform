@@ -2,16 +2,16 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm</groupId>
-    <artifactId>camunda-database-settings</artifactId>
+    <groupId>org.flowave.bpm</groupId>
+    <artifactId>flowave-database-settings</artifactId>
     <relativePath>../database</relativePath>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-engine-plugins</artifactId>
+  <artifactId>flowave-engine-plugins</artifactId>
   <packaging>pom</packaging>
 
-  <name>Camunda Platform - engine plugins</name>
+  <name>Flowave Platform - engine plugins</name>
 
   <modules>
     <module>identity-ldap</module>
@@ -22,8 +22,8 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-core-internal-dependencies</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-core-internal-dependencies</artifactId>
         <version>${project.version}</version>
         <scope>import</scope>
         <type>pom</type>
@@ -38,8 +38,8 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine</artifactId>
       <scope>provided</scope>
     </dependency>
 
@@ -62,8 +62,8 @@
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.commons</groupId>
-      <artifactId>camunda-commons-testing</artifactId>
+      <groupId>org.flowave.commons</groupId>
+      <artifactId>flowave-commons-testing</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>

@@ -2,15 +2,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm</groupId>
-    <artifactId>camunda-parent</artifactId>
+    <groupId>org.flowave.bpm</groupId>
+    <artifactId>flowave-parent</artifactId>
     <relativePath>../parent</relativePath>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.camunda.spin</groupId>
-  <artifactId>camunda-spin-root</artifactId>
-  <name>camunda Spin - root</name>
+  <groupId>org.flowave.spin</groupId>
+  <artifactId>flowave-spin-root</artifactId>
+  <name>flowave Spin - root</name>
   <inceptionYear>2014</inceptionYear>
   <packaging>pom</packaging>
 
@@ -36,8 +36,8 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-core-internal-dependencies</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-core-internal-dependencies</artifactId>
         <version>${project.version}</version>
         <scope>import</scope>
         <type>pom</type>
@@ -187,12 +187,5 @@
       </modules>
     </profile>
   </profiles>
-
-  <scm>
-    <url>https://github.com/camunda/camunda-bpm-platform</url>
-    <connection>scm:git:git@github.com:camunda/camunda-bpm-platform.git</connection>
-    <developerConnection>scm:git:git@github.com:camunda/camunda-bpm-platform.git</developerConnection>
-    <tag>7.23.0</tag>
-  </scm>
 
 </project>

@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>camunda-qa</artifactId>
-  <groupId>org.camunda.bpm.qa</groupId>
+  <artifactId>flowave-qa</artifactId>
+  <groupId>org.flowave.bpm.qa</groupId>
 
   <packaging>pom</packaging>
-  <name>Camunda Platform - QA</name>
+  <name>Flowave Platform - QA</name>
 
   <parent>
-    <groupId>org.camunda.bpm</groupId>
-    <artifactId>camunda-database-settings</artifactId>
+    <groupId>org.flowave.bpm</groupId>
+    <artifactId>flowave-database-settings</artifactId>
     <relativePath>../database</relativePath>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
@@ -52,15 +52,14 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-core-internal-dependencies</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-core-internal-dependencies</artifactId>
         <version>${project.version}</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
     </dependencies>
   </dependencyManagement>
-
   <modules>
     <module>ensure-clean-db-plugin</module>
   </modules>
@@ -90,6 +89,15 @@
     </profile>
 
     <!-- Server profiles -->
+    <profile>
+      <id>jdk17</id>
+      <activation>
+        <jdk>[17,)</jdk>
+      </activation>
+      <modules>
+        <module>integration-tests-engine-jakarta</module>
+      </modules>
+    </profile>
 
     <profile>
       <id>wildfly</id>

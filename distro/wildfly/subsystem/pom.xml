@@ -2,21 +2,21 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm.wildfly</groupId>
-    <artifactId>camunda-wildfly</artifactId>
+    <groupId>org.flowave.bpm.wildfly</groupId>
+    <artifactId>flowave-wildfly</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-wildfly-subsystem</artifactId>
+  <artifactId>flowave-wildfly-subsystem</artifactId>
   <packaging>jar</packaging>
 
-  <name>Camunda Platform - Wildfly Subsystem</name>
+  <name>Flowave Platform - Wildfly Subsystem</name>
 
   <dependencies>
 
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine</artifactId>
       <exclusions>
         <exclusion>
           <groupId>org.springframework</groupId>

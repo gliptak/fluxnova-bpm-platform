@@ -2,31 +2,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <parent>
-    <artifactId>camunda-engine-plugins</artifactId>
-    <groupId>org.camunda.bpm</groupId>
+    <artifactId>flowave-engine-plugins</artifactId>
+    <groupId>org.flowave.bpm</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>camunda-engine-plugin-connect</artifactId>
-  <name>Camunda Platform - engine plugins - connect</name>
+  <artifactId>flowave-engine-plugin-connect</artifactId>
+  <name>Flowave Platform - engine plugins - connect</name>
 
   <dependencies>
 
     <dependency>
-      <groupId>org.camunda.connect</groupId>
-      <artifactId>camunda-connect-core</artifactId>
+      <groupId>org.flowave.connect</groupId>
+      <artifactId>flowave-connect-core</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.connect</groupId>
-      <artifactId>camunda-connect-http-client</artifactId>
+      <groupId>org.flowave.connect</groupId>
+      <artifactId>flowave-connect-http-client</artifactId>
       <scope>test</scope>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.connect</groupId>
-      <artifactId>camunda-connect-soap-http-client</artifactId>
+      <groupId>org.flowave.connect</groupId>
+      <artifactId>flowave-connect-soap-http-client</artifactId>
       <scope>test</scope>
     </dependency>
 

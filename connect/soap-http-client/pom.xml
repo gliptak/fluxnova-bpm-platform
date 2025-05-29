@@ -2,19 +2,19 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.connect</groupId>
-    <artifactId>camunda-connect-root</artifactId>
+    <groupId>org.flowave.connect</groupId>
+    <artifactId>flowave-connect-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-connect-soap-http-client</artifactId>
-  <name>Camunda Platform - connect - soap http client</name>
+  <artifactId>flowave-connect-soap-http-client</artifactId>
+  <name>Flowave Platform - connect - soap http client</name>
 
   <dependencies>
 
     <dependency>
-      <groupId>org.camunda.connect</groupId>
-      <artifactId>camunda-connect-http-client</artifactId>
+      <groupId>org.flowave.connect</groupId>
+      <artifactId>flowave-connect-http-client</artifactId>
     </dependency>
 
     <dependency>

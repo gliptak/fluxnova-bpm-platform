@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>camunda-qa-integration-tests-engine</artifactId>
-  <name>Camunda Platform - QA Integration Tests - Engine</name>
+  <artifactId>flowave-qa-integration-tests-engine</artifactId>
+  <name>Flowave Platform - QA Integration Tests - Engine</name>
 
   <parent>
-    <groupId>org.camunda.bpm.qa</groupId>
-    <artifactId>camunda-qa</artifactId>
+    <groupId>org.flowave.bpm.qa</groupId>
+    <artifactId>flowave-qa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
@@ -104,33 +104,33 @@
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm.javaee</groupId>
-      <artifactId>camunda-ejb-client</artifactId>
+      <groupId>org.flowave.bpm.javaee</groupId>
+      <artifactId>flowave-ejb-client</artifactId>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine-cdi</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine-cdi</artifactId>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
-          <artifactId>camunda-engine</artifactId>
-          <groupId>org.camunda.bpm</groupId>
+          <artifactId>flowave-engine</artifactId>
+          <groupId>org.flowave.bpm</groupId>
         </exclusion>
       </exclusions>
     </dependency>
 
-    <!-- camunda -->
+    <!-- flowave -->
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine</artifactId>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm.dmn</groupId>
-      <artifactId>camunda-engine-dmn</artifactId>
+      <groupId>org.flowave.bpm.dmn</groupId>
+      <artifactId>flowave-engine-dmn</artifactId>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
@@ -149,25 +149,25 @@
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine-spring</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine-spring</artifactId>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
-          <artifactId>camunda-engine</artifactId>
-          <groupId>org.camunda.bpm</groupId>
+          <artifactId>flowave-engine</artifactId>
+          <groupId>org.flowave.bpm</groupId>
         </exclusion>
       </exclusions>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.spin</groupId>
-      <artifactId>camunda-spin-core</artifactId>
+      <groupId>org.flowave.spin</groupId>
+      <artifactId>flowave-spin-core</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.spin</groupId>
-      <artifactId>camunda-spin-dataformat-json-jackson</artifactId>
+      <groupId>org.flowave.spin</groupId>
+      <artifactId>flowave-spin-dataformat-json-jackson</artifactId>
     </dependency>
 
     <dependency>
@@ -180,28 +180,28 @@
       BOM must be installed before this module is built
     -->
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-bom</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-bom</artifactId>
       <version>${project.version}</version>
       <type>pom</type>
       <scope>test</scope>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-core-internal-dependencies</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-core-internal-dependencies</artifactId>
       <version>${project.version}</version>
       <type>pom</type>
       <scope>test</scope>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.connect</groupId>
-      <artifactId>camunda-connect-core</artifactId>
+      <groupId>org.flowave.connect</groupId>
+      <artifactId>flowave-connect-core</artifactId>
     </dependency>
 
     <!-- explicit Spring dependencies for applications
-      that pack camunda-engine-spring -->
+      that pack flowave-engine-spring -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
@@ -292,8 +292,8 @@
       <dependencies>
         <dependency>
           <!-- make sure this comes after runtime in the reactor build -->
-          <groupId>org.camunda.bpm.qa</groupId>
-          <artifactId>camunda-qa-wildfly26-runtime</artifactId>
+          <groupId>org.flowave.bpm.qa</groupId>
+          <artifactId>flowave-qa-wildfly26-runtime</artifactId>
           <version>${project.version}</version>
           <scope>provided</scope>
           <type>pom</type>
@@ -371,8 +371,8 @@
       <dependencies>
         <dependency>
           <!-- make sure this comes after runtime in the reactor build -->
-          <groupId>org.camunda.bpm.qa</groupId>
-          <artifactId>camunda-qa-wildfly26-runtime</artifactId>
+          <groupId>org.flowave.bpm.qa</groupId>
+          <artifactId>flowave-qa-wildfly26-runtime</artifactId>
           <version>${project.version}</version>
           <scope>provided</scope>
           <type>pom</type>
@@ -489,8 +489,8 @@
         <dependencies>
           <!-- import internal dependencies before JBoss to preserve internal versions, e.g. for JUnit -->
           <dependency>
-            <groupId>org.camunda.bpm</groupId>
-            <artifactId>camunda-core-internal-dependencies</artifactId>
+            <groupId>org.flowave.bpm</groupId>
+            <artifactId>flowave-core-internal-dependencies</artifactId>
             <version>${project.version}</version>
             <scope>import</scope>
             <type>pom</type>
@@ -507,8 +507,8 @@
       <dependencies>
         <dependency>
           <!-- make sure this comes after runtime in the reactor build -->
-          <groupId>org.camunda.bpm.qa</groupId>
-          <artifactId>camunda-qa-tomcat9-runtime</artifactId>
+          <groupId>org.flowave.bpm.qa</groupId>
+          <artifactId>flowave-qa-tomcat9-runtime</artifactId>
           <version>${project.version}</version>
           <scope>provided</scope>
           <type>pom</type>
@@ -667,8 +667,8 @@
       <id>clean-db</id>
       <dependencies>
         <dependency>
-          <groupId>org.camunda.bpm</groupId>
-          <artifactId>camunda-engine</artifactId>
+          <groupId>org.flowave.bpm</groupId>
+          <artifactId>flowave-engine</artifactId>
           <scope>test</scope>
         </dependency>
       </dependencies>
@@ -687,8 +687,8 @@
                 <configuration>
                   <artifactItems>
                     <artifactItem>
-                      <groupId>org.camunda.bpm</groupId>
-                      <artifactId>camunda-engine</artifactId>
+                      <groupId>org.flowave.bpm</groupId>
+                      <artifactId>flowave-engine</artifactId>
                       <outputDirectory>${project.build.directory}/sql-scripts/engine</outputDirectory>
                       <overWrite>true</overWrite>
                     </artifactItem>

@@ -2,24 +2,24 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.connect</groupId>
-    <artifactId>camunda-connect-root</artifactId>
+    <groupId>org.flowave.connect</groupId>
+    <artifactId>flowave-connect-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-connect-core</artifactId>
-  <name>Camunda Platform - connect - core</name>
+  <artifactId>flowave-connect-core</artifactId>
+  <name>Flowave Platform - connect - core</name>
 
   <dependencies>
 
     <dependency>
-      <groupId>org.camunda.commons</groupId>
-      <artifactId>camunda-commons-logging</artifactId>
+      <groupId>org.flowave.commons</groupId>
+      <artifactId>flowave-commons-logging</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.commons</groupId>
-      <artifactId>camunda-commons-utils</artifactId>
+      <groupId>org.flowave.commons</groupId>
+      <artifactId>flowave-commons-utils</artifactId>
     </dependency>
 
     <dependency>

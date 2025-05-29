@@ -3,16 +3,16 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm</groupId>
-    <artifactId>camunda-database-settings</artifactId>
+    <groupId>org.flowave.bpm</groupId>
+    <artifactId>flowave-database-settings</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>../../database</relativePath>
   </parent>
 
-  <groupId>org.camunda.bpm.run</groupId>
-  <artifactId>camunda-bpm-run-root</artifactId>
-  <name>Camunda Platform - Run - Root</name>
-  <description>This is the root of Camunda Platform Run</description>
+  <groupId>org.flowave.bpm.run</groupId>
+  <artifactId>flowave-bpm-run-root</artifactId>
+  <name>Flowave Platform - Run - Root</name>
+  <description>This is the root of Flowave Platform Run</description>
   <packaging>pom</packaging>
 
   <dependencyManagement>

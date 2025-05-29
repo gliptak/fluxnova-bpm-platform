@@ -2,14 +2,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm.qa.upgrade</groupId>
-    <artifactId>camunda-qa-db-instance-migration</artifactId>
+    <groupId>org.flowave.bpm.qa.upgrade</groupId>
+    <artifactId>flowave-qa-db-instance-migration</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-qa-upgrade-test-fixture-715</artifactId>
+  <artifactId>flowave-qa-upgrade-test-fixture-715</artifactId>
   <packaging>jar</packaging>
-  <name>Camunda Platform - QA - upgrade - instance migration - test fixture - 7.15.0</name>
+  <name>Flowave Platform - QA - upgrade - instance migration - test fixture - 7.15.0</name>
 
   <properties>
     <camunda.version.previous>7.14.0</camunda.version.previous>
@@ -20,8 +20,8 @@
    <dependencyManagement>
      <dependencies>
        <dependency>
-         <groupId>org.camunda.bpm</groupId>
-         <artifactId>camunda-bom</artifactId>
+         <groupId>org.flowave.bpm</groupId>
+         <artifactId>flowave-bom</artifactId>
          <version>7.15.0</version>
          <scope>import</scope>
          <type>pom</type>
@@ -32,23 +32,23 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.spin</groupId>
-      <artifactId>camunda-spin-dataformat-json-jackson</artifactId>
+      <groupId>org.flowave.spin</groupId>
+      <artifactId>flowave-spin-dataformat-json-jackson</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine-plugin-spin</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine-plugin-spin</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm.qa.upgrade</groupId>
-      <artifactId>camunda-qa-upgrade-scenario-util</artifactId>
+      <groupId>org.flowave.bpm.qa.upgrade</groupId>
+      <artifactId>flowave-qa-upgrade-scenario-util</artifactId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>
@@ -125,8 +125,8 @@
                 <configuration>
                   <artifactItems>
                     <artifactItem>
-                      <groupId>org.camunda.bpm.distro</groupId>
-                      <artifactId>camunda-sql-scripts</artifactId>
+                      <groupId>org.flowave.bpm.distro</groupId>
+                      <artifactId>flowave-sql-scripts</artifactId>
                       <version>7.15.0</version>
                       <type>test-jar</type>
                       <outputDirectory>${project.build.directory}/scripts-current</outputDirectory>

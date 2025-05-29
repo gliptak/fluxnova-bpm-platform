@@ -3,20 +3,20 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm.dmn</groupId>
-    <artifactId>camunda-engine-dmn-root</artifactId>
+    <groupId>org.flowave.bpm.dmn</groupId>
+    <artifactId>flowave-engine-dmn-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-engine-feel-api</artifactId>
-  <name>camunda DMN - engine FEEL - API</name>
+  <artifactId>flowave-engine-feel-api</artifactId>
+  <name>flowave DMN - engine FEEL - API</name>
   <properties>
-    <camunda.artifact>org.camunda.bpm.dmn.feel.impl</camunda.artifact>
+    <camunda.artifact>org.flowave.bpm.dmn.feel.impl</camunda.artifact>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>org.camunda.commons</groupId>
-      <artifactId>camunda-commons-typed-values</artifactId>
+      <groupId>org.flowave.commons</groupId>
+      <artifactId>flowave-commons-typed-values</artifactId>
     </dependency>
   </dependencies>
 

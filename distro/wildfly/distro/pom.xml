@@ -2,59 +2,59 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm.wildfly</groupId>
-    <artifactId>camunda-wildfly</artifactId>
+    <groupId>org.flowave.bpm.wildfly</groupId>
+    <artifactId>flowave-wildfly</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-bpm-wildfly</artifactId>
+  <artifactId>flowave-bpm-wildfly</artifactId>
   <packaging>pom</packaging>
 
-  <name>Camunda Platform - Wildfly Distro</name>
+  <name>Flowave Platform - Wildfly Distro</name>
 
   <dependencies>
     <dependency>
       <!-- this dependency is to make sure that we are executed after the
         integration tests have passed in the reactor -->
-      <groupId>org.camunda.bpm.qa</groupId>
-      <artifactId>camunda-qa</artifactId>
+      <groupId>org.flowave.bpm.qa</groupId>
+      <artifactId>flowave-qa</artifactId>
       <version>${project.version}</version>
       <type>pom</type>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm.wildfly</groupId>
-      <artifactId>camunda-wildfly-assembly</artifactId>
+      <groupId>org.flowave.bpm.wildfly</groupId>
+      <artifactId>flowave-wildfly-assembly</artifactId>
       <version>${project.version}</version>
       <type>tar.gz</type>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm.distro</groupId>
-      <artifactId>camunda-sql-scripts</artifactId>
+      <groupId>org.flowave.bpm.distro</groupId>
+      <artifactId>flowave-sql-scripts</artifactId>
       <version>${project.version}</version>
       <type>jar</type>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine-rest-jakarta</artifactId>
+      <groupId>org.flowave.bpm</groupId>
+      <artifactId>flowave-engine-rest-jakarta</artifactId>
       <version>${project.version}</version>
       <classifier>wildfly</classifier>
       <type>war</type>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm.webapp</groupId>
-      <artifactId>camunda-webapp-wildfly</artifactId>
+      <groupId>org.flowave.bpm.webapp</groupId>
+      <artifactId>flowave-webapp-wildfly</artifactId>
       <version>${project.version}</version>
       <type>war</type>
     </dependency>
 
     <dependency>
-      <groupId>org.camunda.bpm.example</groupId>
-      <artifactId>camunda-example-invoice-jakarta</artifactId>
+      <groupId>org.flowave.bpm.example</groupId>
+      <artifactId>flowave-example-invoice-jakarta</artifactId>
       <version>${project.version}</version>
       <type>war</type>
     </dependency>

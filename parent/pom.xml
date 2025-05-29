@@ -2,19 +2,19 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda.bpm</groupId>
-    <artifactId>camunda-root</artifactId>
+    <groupId>org.flowave.bpm</groupId>
+    <artifactId>flowave-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>../</relativePath>
   </parent>
 
-  <artifactId>camunda-parent</artifactId>
-  <name>Camunda Platform - Parent Pom</name>
+  <artifactId>flowave-parent</artifactId>
+  <name>Flowave Platform - Parent Pom</name>
   <inceptionYear>2013</inceptionYear>
   <packaging>pom</packaging>
 
   <description>
-    This pom is the parent of all Camunda Platform projects
+    This pom is the parent of all Flowave Platform projects
   </description>
 
   <properties>
@@ -121,8 +121,8 @@
     <dependencies>
 
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-bom</artifactId>
+        <groupId>org.flowave.bpm</groupId>
+        <artifactId>flowave-bom</artifactId>
         <version>${project.version}</version>
         <type>pom</type>
         <scope>import</scope>
@@ -295,8 +295,8 @@
             <rules>
               <jakartaDefaults>true</jakartaDefaults>
               <renames>
-                <rename>jar:file:${org.camunda.bpm:camunda-engine:jar}!/META-INF/jakarta-renames.properties</rename>
-                <rename>jar:file:${org.camunda.bpm:camunda-engine:jar}!/META-INF/camunda-renames.properties</rename>
+                <rename>jar:file:${org.flowave.bpm:flowave-engine:jar}!/META-INF/jakarta-renames.properties</rename>
+                <rename>jar:file:${org.flowave.bpm:flowave-engine:jar}!/META-INF/camunda-renames.properties</rename>
               </renames>
             </rules>
             <classifier>jakarta</classifier>
@@ -354,12 +354,4 @@
     </license>
   </licenses>
 
-  <organization>
-    <name>camunda services GmbH</name>
-    <url>http://www.camunda.com</url>
-  </organization>
-
-  <url>http://www.camunda.org</url>
 </project>
-
-
