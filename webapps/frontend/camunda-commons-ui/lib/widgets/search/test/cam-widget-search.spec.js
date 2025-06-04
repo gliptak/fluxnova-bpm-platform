@@ -292,7 +292,7 @@ describe('Search Widget', function() {
 
 
     it('allows to save a set of search criteria', function() {
-      browser.executeScript('localStorage.removeItem("camunda")');
+      browser.executeScript('localStorage.removeItem("flowave")');
 
       var example = page.example('example1');
 
@@ -328,7 +328,7 @@ describe('Search Widget', function() {
       var label = example.storageDropdownMenuItemName(2);
       expect(label.getText()).to.eventually.eql('tractor');
 
-      browser.executeScript('return JSON.parse(localStorage.getItem("camunda"))')
+      browser.executeScript('return JSON.parse(localStorage.getItem("flowave"))')
         .then(function(result) {
           expect(result.searchCriteria.search1.tractor).to.be.an('array');
         })
@@ -387,7 +387,7 @@ describe('Search Widget', function() {
       items = example.storageDropdownMenuItems();
       expect(items.count()).to.eventually.eql(1);
 
-      browser.executeScript('return JSON.parse(localStorage.getItem("camunda"))')
+      browser.executeScript('return JSON.parse(localStorage.getItem("flowave"))')
         .then(function(result) {
           expect(result.searchCriteria.search1).to.be.an('object');
           expect(Object.keys(result.searchCriteria.search1)).to.have.length(0);
@@ -404,7 +404,7 @@ describe('Search Widget', function() {
       });
 
       it('stores the sets in separate groups', function() {
-        browser.executeScript('localStorage.removeItem("camunda")')
+        browser.executeScript('localStorage.removeItem("flowave")')
           .then(function(res) {
             input = example.storageDropdownInput();
             ddBtn = example.storageDropdownButton();
@@ -458,7 +458,7 @@ describe('Search Widget', function() {
 
 
 
-            browser.executeScript('return JSON.parse(localStorage.getItem("camunda"))')
+            browser.executeScript('return JSON.parse(localStorage.getItem("flowave"))')
               .then(function(result) {
               // console.info('result', result);
                 expect(result.searchCriteria).to.have.keys(['A', 'B', 'search1']);

@@ -85,7 +85,7 @@ public class CamundaBpmWebappAutoConfiguration implements WebMvcConfigurer {
         .addResourceLocations(classpath + "/app/");
     registry.addResourceHandler(applicationPath + "/assets/**")
         .addResourceLocations(classpath + "/assets/");
-     registry.addResourceHandler(applicationPath + "/favicon.ico")
+     registry.addResourceHandler(applicationPath + "/flowave-favicon.ico")
          .addResourceLocations(classpath + "/") // add slash to get rid of the WARN log
          .resourceChain(true)
          .addResolver(faviconResourceResolver());

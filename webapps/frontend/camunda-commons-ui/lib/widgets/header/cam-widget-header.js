@@ -21,7 +21,7 @@ var $ = require('jquery');
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular'),
   template = require('./cam-widget-header.html?raw'),
-  logo = require('./logo-2020-round.svg?raw');
+  logo = require('./flowave-icon.svg?raw');
 
 var apps = {
   welcome: {

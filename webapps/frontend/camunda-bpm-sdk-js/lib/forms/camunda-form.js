@@ -119,7 +119,7 @@ function CamundaForm(options) {
   if (!this.formElement && !this.formUrl) {
     return done(
       new Error(
-        "Camunda form needs to be intialized with either 'formElement' or 'formUrl'"
+        "Flowave form needs to be intialized with either 'formElement' or 'formUrl'"
       )
     );
   }

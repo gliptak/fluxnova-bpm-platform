@@ -48,7 +48,7 @@ async function generateDocs() {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy"
           content="default-src 'self'; script-src 'unsafe-inline' blob:; style-src 'unsafe-inline' 'self'; img-src 'self' data:;">
-    <link rel="shortcut icon" href="/manual/latest/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/manual/latest/img/flowave-favicon.ico" type="image/x-icon">
     <style>
         @import url('/manual/latest/fonts/IBMPlexSans-Regular.ttf');
         @import url('/manual/latest/fonts/IBMPlexSans-Italic.ttf');

@@ -40,7 +40,7 @@ module.exports = [
         const ProcessDefinition = camAPI.resource('process-definition');
         const taskId = formController.getParams().taskId;
         const savedState = JSON.parse(
-          localStorage.getItem(`camunda-form:${taskId}`) || '{}'
+          localStorage.getItem(`flowave-form:${taskId}`) || '{}'
         );
         let form;
         let variables = []; // initialize it with empty array for start event forms without taskId
@@ -159,12 +159,12 @@ module.exports = [
 
         function handleSave() {
           const {data} = getFormData();
-          localStorage.setItem(`camunda-form:${taskId}`, JSON.stringify(data));
+          localStorage.setItem(`flowave-form:${taskId}`, JSON.stringify(data));
           formController.notifyFormDirty(false);
         }
 
         function clearSave() {
-          localStorage.removeItem(`camunda-form:${taskId}`);
+          localStorage.removeItem(`flowave-form:${taskId}`);
         }
 
         formController.registerSaveHandler(handleSave);

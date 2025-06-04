@@ -17,7 +17,7 @@
 
 'use strict';
 
-var resetUrl = 'http://localhost:8080/camunda/ensureCleanDb/default';
+var resetUrl = 'http://localhost:8080/flowave/ensureCleanDb/default';
 var request = require('request');
 var CamSDK = require('camunda-bpm-sdk-js');
 var camClient = new CamSDK.Client({

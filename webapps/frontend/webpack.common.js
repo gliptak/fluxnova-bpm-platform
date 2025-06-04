@@ -150,7 +150,7 @@ module.exports = (_env, argv = {}) => {
         template: path.resolve(__dirname, 'ui/cockpit/client/scripts/index.html'),
         filename: 'app/cockpit/index.html',
         chunks: ['app/cockpit/camunda-cockpit-bootstrap'],
-        favicon: path.resolve(__dirname, 'ui/common/images/favicon.ico'),
+        favicon: path.resolve(__dirname, 'ui/common/images/flowave-favicon.ico'),
         publicPath: '$APP_ROOT',
         version
       }),
@@ -161,7 +161,7 @@ module.exports = (_env, argv = {}) => {
         template: path.resolve(__dirname, 'ui/tasklist/client/index.html'),
         filename: 'app/tasklist/index.html',
         chunks: ['app/tasklist/camunda-tasklist-bootstrap'],
-        favicon: path.resolve(__dirname, 'ui/common/images/favicon.ico'),
+        favicon: path.resolve(__dirname, 'ui/common/images/flowave-favicon.ico'),
         publicPath: '$APP_ROOT',
         version
       }),
@@ -172,7 +172,7 @@ module.exports = (_env, argv = {}) => {
         template: path.resolve(__dirname, 'ui/admin/client/scripts/index.html'),
         filename: 'app/admin/index.html',
         chunks: ['app/admin/camunda-admin-bootstrap'],
-        favicon: path.resolve(__dirname, 'ui/common/images/favicon.ico'),
+        favicon: path.resolve(__dirname, 'ui/common/images/flowave-favicon.ico'),
         publicPath: '$APP_ROOT',
         version
       }),
@@ -183,7 +183,7 @@ module.exports = (_env, argv = {}) => {
         template: path.resolve(__dirname, 'ui/welcome/client/scripts/index.html'),
         filename: 'app/welcome/index.html',
         chunks: ['app/welcome/camunda-welcome-bootstrap'],
-        favicon: path.resolve(__dirname, 'ui/common/images/favicon.ico'),
+        favicon: path.resolve(__dirname, 'ui/common/images/flowave-favicon.ico'),
         publicPath: '$APP_ROOT',
         version
       }),

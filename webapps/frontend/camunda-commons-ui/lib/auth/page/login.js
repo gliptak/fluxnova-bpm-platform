@@ -18,7 +18,7 @@
 'use strict';
 
 var template = require('./login.html?raw');
-var logo = require('svg-inline-loader?classPrefix&removeSVGTagAttrs=false!./logo.svg');
+var logo = require('svg-inline-loader?classPrefix&removeSVGTagAttrs=false!./flowave-logo.svg');
 
 var Controller = [
   '$scope',
@@ -67,7 +67,7 @@ var Controller = [
     if (showFirstLogin) {
       $http({
         method: 'GET',
-        url: '/camunda-welcome'
+        url: '/flowave-welcome'
       })
         .then(function(res) {
           if (res.status !== 200) {

@@ -31,18 +31,18 @@ module.exports = (_env, argv = {}) => {
 
   const addEngines = engines => {
     return engines.reduce((acc, engine) => {
-      acc[`/camunda/app/*/${engine}/`] = {
+      acc[`/flowave/app/*/${engine}/`] = {
         target: 'http://localhost:8081/',
         pathRewrite: path => {
-          return path.replace(`/${engine}`, '').replace('/camunda', '');
+          return path.replace(`/${engine}`, '').replace('/flowave', '');
         }
       };
-      acc[`/camunda/app/*/${engine}/setup/`] = {
+      acc[`/flowave/app/*/${engine}/setup/`] = {
         target: 'http://localhost:8081/',
         pathRewrite: path => {
           return path
             .replace(`/${engine}`, '')
-            .replace('/camunda', '')
+            .replace('/flowave', '')
             .replace('/setup', '');
         }
       };
@@ -67,33 +67,33 @@ module.exports = (_env, argv = {}) => {
       https: false,
       proxy: {
         '/api': {
-          target: 'http://localhost:8080/camunda/api',
+          target: 'http://localhost:8080/flowave/api',
           logLevel: 'debug',
           pathRewrite: {
             '^/api': ''
           }
         },
-        '/camunda-welcome': {
+        '/flowave-welcome': {
           target: 'http://localhost:8080/',
           logLevel: 'debug'
         },
         ...addEngines(['default', 'engine2', 'engine3']),
-        '/camunda/*': {
+        '/flowave/*': {
           target: 'http://localhost:8081/',
           logLevel: 'debug',
           pathRewrite: path => {
-            return path.replace('/camunda', '');
+            return path.replace('/flowave', '');
           }
         },
-        '/camunda/api/*': {
+        '/flowave/api/*': {
           target: 'http://localhost:8081/',
           logLevel: 'debug',
           pathRewrite: path => {
-            return path.replace('/camunda', '');
+            return path.replace('/flowave', '');
           }
         }
       },
-      open: ['/camunda/app/cockpit/default/']
+      open: ['/flowave/app/cockpit/default/']
     }
   };
 
@@ -140,9 +140,9 @@ module.exports = (_env, argv = {}) => {
       const options = plugin.options;
       plugin.options = {
         ...options,
-        publicPath: '/camunda',
-        appRoot: '/camunda',
-        appBase: `/camunda/app/${options['appName']}/{ENGINE}/`,
+        publicPath: '/flowave',
+        appRoot: '/flowave',
+        appBase: `/flowave/app/${options['appName']}/{ENGINE}/`,
         pluginDeps: getPluginDeps(options['appName']),
         pluginPackages: getPluginPackages(options['appName'])
       };
