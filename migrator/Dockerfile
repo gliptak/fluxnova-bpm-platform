@@ -1,5 +1,5 @@
 # Use the official MVN image
-FROM maven:3.9.9-eclipse-temurin-22-jammy
+FROM maven:3.9.9-eclipse-temurin-21-noble
 
 ENV M2_HOME=/usr/share/maven
 
@@ -10,4 +10,4 @@ WORKDIR /app
 COPY target/flowave-migrator*.jar /app/flowave-migrator.jar
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "flowave-migrator.jar"]
+ENTRYPOINT ["java", "-jar", "/app/flowave-migrator.jar"]
