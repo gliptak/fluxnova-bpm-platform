@@ -1,4 +1,4 @@
-camunda.bpm.run.process-engine-plugins:
+flowave.bpm.run.process-engine-plugins:
   - plugin-class: org.camunda.bpm.run.test.plugins.TestFirstPlugin
     plugin-parameters:
       parameterOne: valueOne

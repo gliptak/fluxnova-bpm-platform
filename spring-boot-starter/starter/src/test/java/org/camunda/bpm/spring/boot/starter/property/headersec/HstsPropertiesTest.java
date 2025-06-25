@@ -24,17 +24,17 @@ import org.springframework.test.context.TestPropertySource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @TestPropertySource(properties = {
-  "camunda.bpm.webapp.headerSecurity.hstsDisabled=false",
-  "camunda.bpm.webapp.headerSecurity.hstsIncludeSubdomainsDisabled=false",
-  "camunda.bpm.webapp.headerSecurity.hstsMaxAge=47",
-  "camunda.bpm.webapp.headerSecurity.hstsValue=Foo"
+  "flowave.bpm.webapp.headerSecurity.hstsDisabled=false",
+  "flowave.bpm.webapp.headerSecurity.hstsIncludeSubdomainsDisabled=false",
+  "flowave.bpm.webapp.headerSecurity.hstsMaxAge=47",
+  "flowave.bpm.webapp.headerSecurity.hstsValue=Foo"
 })
 public class HstsPropertiesTest extends ParsePropertiesHelper {
 
   @Test
   public void shouldCheckHstsProperties() {
     // given
-    
+
     // when
     HeaderSecurityProperties properties = webapp.getHeaderSecurity();
 

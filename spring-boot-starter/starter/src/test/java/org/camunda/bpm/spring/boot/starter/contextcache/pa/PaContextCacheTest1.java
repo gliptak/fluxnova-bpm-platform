@@ -39,7 +39,7 @@ import static org.camunda.bpm.engine.test.assertions.bpmn.AbstractAssertions.ini
 @SpringBootTest(
   classes = { TestProcessApplication.class },
   properties = {
-    "camunda.bpm.process-engine-name=foo",
+    "flowave.bpm.process-engine-name=foo",
     "spring.datasource.generate-unique-name=true",
     "paTest1Property=paTest1Value"
   },

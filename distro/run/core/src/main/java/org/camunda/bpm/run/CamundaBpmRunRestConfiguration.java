@@ -50,11 +50,11 @@ public class CamundaBpmRunRestConfiguration {
    * The CORS and Authentication filters need to run before other camunda
    * filters because they potentially block the request and this should be done
    * as early as possible.
-   * 
+   *
    * The default order parameter for spring-boot managed filters is
    * org.springframework.core.Ordered.LOWEST_PRECEDENCE = Integer.MAX_VALUE.
    * Order can range from -Integer.MAX_VALUE to Integer.MAX_VALUE.
-   * 
+   *
    * The CORS filter must run before the Authentication filter because CORS
    * preflight requests must not contain authentication. The CORS filter will
    * not invoke the next filter in the chain for preflight requests.
@@ -66,7 +66,7 @@ public class CamundaBpmRunRestConfiguration {
   @ConditionalOnProperty(name = "enabled", havingValue = "true", prefix = CamundaBpmRunAuthenticationProperties.PREFIX)
   public FilterRegistrationBean<Filter> processEngineAuthenticationFilter(JerseyApplicationPath applicationPath) {
     FilterRegistrationBean<Filter> registration = new FilterRegistrationBean<>();
-    registration.setName("camunda-auth");
+    registration.setName("flowave-auth");
     registration.setFilter(new ProcessEngineAuthenticationFilter());
     registration.setOrder(AUTH_FILTER_PRECEDENCE);
 
@@ -85,7 +85,7 @@ public class CamundaBpmRunRestConfiguration {
   @ConditionalOnProperty(name = "enabled", havingValue = "true", prefix = CamundaBpmRunCorsProperty.PREFIX)
   public FilterRegistrationBean<Filter> corsFilter(JerseyApplicationPath applicationPath) {
     FilterRegistrationBean<Filter> registration = new FilterRegistrationBean<>();
-    registration.setName("camunda-cors");
+    registration.setName("flowave-cors");
     CorsFilter corsFilter = new CorsFilter();
     registration.setFilter(corsFilter);
     registration.setOrder(CORS_FILTER_PRECEDENCE);

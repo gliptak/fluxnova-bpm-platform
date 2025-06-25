@@ -42,8 +42,8 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 @TestPropertySource(properties = {
-    "camunda.bpm.client.basic-auth.username=my-username",
-    "camunda.bpm.client.basic-auth.password=my-password",
+    "flowave.bpm.client.basic-auth.username=my-username",
+    "flowave.bpm.client.basic-auth.password=my-password",
 })
 @ContextConfiguration(classes = {
     ParsePropertiesHelper.TestConfig.class,
@@ -55,7 +55,7 @@ import static org.mockito.Mockito.verify;
 public class BasicAuthAndInterceptorConfigurationTest extends ParsePropertiesHelper {
 
   protected static ExternalTaskClientBuilder clientBuilder;
-  
+
   @Rule
   public MockitoRule mockitoRule = MockitoJUnit.rule();
 

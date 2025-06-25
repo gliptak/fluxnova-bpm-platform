@@ -597,7 +597,7 @@ public abstract class TestHelper {
     processEngineConfiguration.getCommandExecutorTxRequired()
       .execute(commandContext -> {
         DbEntityManager dbEntityManager = commandContext.getDbEntityManager();
-        PropertyEntity installationIdProperty = dbEntityManager.selectById(PropertyEntity.class, "camunda.installation.id");
+        PropertyEntity installationIdProperty = dbEntityManager.selectById(PropertyEntity.class, "flowave.installation.id");
         if (installationIdProperty != null) {
           dbEntityManager.delete(installationIdProperty);
         }

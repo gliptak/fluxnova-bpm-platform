@@ -21,8 +21,8 @@ import static org.camunda.bpm.client.rule.ClientRule.LOCK_DURATION;
 import static org.camunda.bpm.client.util.ProcessModels.EXTERNAL_TASK_TOPIC_BAR;
 import static org.camunda.bpm.client.util.ProcessModels.EXTERNAL_TASK_TOPIC_FOO;
 import static org.camunda.bpm.client.util.ProcessModels.TWO_EXTERNAL_TASK_PROCESS;
-import static org.camunda.bpm.client.util.PropertyUtil.CAMUNDA_ENGINE_NAME;
-import static org.camunda.bpm.client.util.PropertyUtil.CAMUNDA_ENGINE_REST;
+import static org.camunda.bpm.client.util.PropertyUtil.FLOWAVE_ENGINE_NAME;
+import static org.camunda.bpm.client.util.PropertyUtil.FLOWAVE_ENGINE_REST;
 import static org.camunda.bpm.client.util.PropertyUtil.DEFAULT_PROPERTIES_PATH;
 import static org.camunda.bpm.client.util.PropertyUtil.loadProperties;
 import static org.camunda.bpm.engine.variable.Variables.SerializationDataFormats.JAVA;
@@ -66,7 +66,7 @@ public class JavaSerializationIT {
 
   protected ClientRule clientRule = new ClientRule(() -> {
     Properties properties = loadProperties(DEFAULT_PROPERTIES_PATH);
-    String baseUrl = properties.getProperty(CAMUNDA_ENGINE_REST) + ENGINE_NAME;
+    String baseUrl = properties.getProperty(FLOWAVE_ENGINE_REST) + ENGINE_NAME;
     return ExternalTaskClient.create()
         .baseUrl(baseUrl)
         .disableAutoFetching()
@@ -75,7 +75,7 @@ public class JavaSerializationIT {
 
   protected EngineRule engineRule = new EngineRule(() -> {
     Properties properties = loadProperties(DEFAULT_PROPERTIES_PATH);
-    properties.put(CAMUNDA_ENGINE_NAME, ENGINE_NAME);
+    properties.put(FLOWAVE_ENGINE_NAME, ENGINE_NAME);
     return properties;
   });
 

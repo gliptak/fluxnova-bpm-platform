@@ -111,7 +111,7 @@
         <module>wildfly-runtime</module>
       </modules>
     </profile>
-    
+
     <profile>
       <id>wildfly26</id>
       <modules>
@@ -154,7 +154,7 @@
         <module>integration-tests-engine</module>
       </modules>
     </profile>
-    
+
     <profile>
       <id>engine-integration-jakarta</id>
       <modules>
