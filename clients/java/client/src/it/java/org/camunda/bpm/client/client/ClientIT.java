@@ -71,8 +71,8 @@ public class ClientIT {
 
   static {
     Properties properties = loadProperties(DEFAULT_PROPERTIES_PATH);
-    String engineRest = properties.getProperty(PropertyUtil.CAMUNDA_ENGINE_REST);
-    String engineName = properties.getProperty(PropertyUtil.CAMUNDA_ENGINE_NAME);
+    String engineRest = properties.getProperty(PropertyUtil.FLOWAVE_ENGINE_REST);
+    String engineName = properties.getProperty(PropertyUtil.FLOWAVE_ENGINE_NAME);
     BASE_URL = engineRest + engineName;
   }
 
@@ -197,10 +197,10 @@ public class ClientIT {
     try {
       // given
       ExternalTaskClientBuilder externalTaskClientBuilder = ExternalTaskClient.create();
-      
+
       // then
       thrown.expect(ExternalTaskClientException.class);
-      
+
       // when
       client = externalTaskClientBuilder.build();
     }
@@ -218,10 +218,10 @@ public class ClientIT {
     try {
       // given
       ExternalTaskClientBuilder externalTaskClientBuilder = ExternalTaskClient.create();
-      
+
       // then
       thrown.expect(ExternalTaskClientException.class);
-      
+
       // when
       client = externalTaskClientBuilder
           .baseUrl(null)
@@ -289,10 +289,10 @@ public class ClientIT {
       // given
       ExternalTaskClientBuilder externalTaskClientBuilder = ExternalTaskClient.create()
           .baseUrl("http://camunda.com/engine-rest");
-      
+
       // then
       thrown.expect(ExternalTaskClientException.class);
-      
+
       // when
       client = externalTaskClientBuilder
           .maxTasks(0)
@@ -341,10 +341,10 @@ public class ClientIT {
       ExternalTaskClientBuilder clientBuilder = ExternalTaskClient.create()
           .baseUrl("http://camunda.com/engine-rest")
           .asyncResponseTimeout(0);
-      
+
       // then
       thrown.expect(ExternalTaskClientException.class);
-      
+
       // when
       client = clientBuilder.build();
     }
@@ -415,10 +415,10 @@ public class ClientIT {
       ExternalTaskClientBuilder externalTaskClientBuilder = ExternalTaskClient.create()
           .baseUrl("http://camunda.com/engine-rest")
           .lockDuration(0);
-      
+
       // then
       thrown.expect(ExternalTaskClientException.class);
-      
+
       // when
       client = externalTaskClientBuilder.build();
     }

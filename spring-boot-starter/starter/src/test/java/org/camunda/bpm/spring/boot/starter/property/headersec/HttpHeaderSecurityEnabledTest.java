@@ -24,10 +24,10 @@ import org.springframework.test.context.TestPropertySource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @TestPropertySource(properties = {
-  "camunda.bpm.webapp.headerSecurity.xssProtectionDisabled=false",
-  "camunda.bpm.webapp.headerSecurity.contentSecurityPolicyDisabled=false",
-  "camunda.bpm.webapp.headerSecurity.contentTypeOptionsDisabled=false",
-  "camunda.bpm.webapp.headerSecurity.hstsDisabled=false"
+  "flowave.bpm.webapp.headerSecurity.xssProtectionDisabled=false",
+  "flowave.bpm.webapp.headerSecurity.contentSecurityPolicyDisabled=false",
+  "flowave.bpm.webapp.headerSecurity.contentTypeOptionsDisabled=false",
+  "flowave.bpm.webapp.headerSecurity.hstsDisabled=false"
 })
 public class HttpHeaderSecurityEnabledTest extends ParsePropertiesHelper {
 
@@ -58,7 +58,7 @@ public class HttpHeaderSecurityEnabledTest extends ParsePropertiesHelper {
   @Test
   public void shouldCheckHstsEnabled() {
     // given
-    
+
     // when
     HeaderSecurityProperties properties = webapp.getHeaderSecurity();
 

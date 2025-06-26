@@ -38,8 +38,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.verify;
 
 @TestPropertySource(properties = {
-    "camunda.bpm.client.basic-auth.username=my-username",
-    "camunda.bpm.client.basic-auth.password=my-password",
+    "flowave.bpm.client.basic-auth.username=my-username",
+    "flowave.bpm.client.basic-auth.password=my-password",
 })
 @ContextConfiguration(classes = {
     ParsePropertiesHelper.TestConfig.class,
@@ -51,7 +51,7 @@ public class BasicAuthConfigurationTest extends ParsePropertiesHelper {
 
   @Rule
   public MockitoRule mockitoRule = MockitoJUnit.rule();
-  
+
   protected static ExternalTaskClientBuilder clientBuilder;
 
   @BeforeClass

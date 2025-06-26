@@ -19,12 +19,12 @@ package org.camunda.bpm.container.impl.jboss.extension;
 
 /**
  * Constants used in the model
- * 
+ *
  * @author Daniel Meyer
  * @author christian.lipphardt@camunda.com
  */
 public interface ModelConstants {
-  
+
   // elements
   @Deprecated
   String ACQUISITION_STRATEGY = "acquisition-strategy";
@@ -55,5 +55,5 @@ public interface ModelConstants {
   String KEEPALIVE_TIME = "keepalive-time";
 
   /** The name of our subsystem within the model. */
-  String SUBSYSTEM_NAME = "camunda-bpm-platform";
+  String SUBSYSTEM_NAME = "flowave-bpm-platform";
 }

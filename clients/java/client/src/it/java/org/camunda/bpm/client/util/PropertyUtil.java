@@ -25,8 +25,8 @@ import org.slf4j.LoggerFactory;
 public class PropertyUtil {
 
   public static final String DEFAULT_PROPERTIES_PATH = "integration-rules.properties";
-  public static final String CAMUNDA_ENGINE_REST = "camunda.engine.rest";
-  public static final String CAMUNDA_ENGINE_NAME = "camunda.engine.name";
+  public static final String FLOWAVE_ENGINE_REST = "flowave.engine.rest";
+  public static final String FLOWAVE_ENGINE_NAME = "flowave.engine.name";
 
   private static Logger logger = LoggerFactory.getLogger(PropertyUtil.class);
 

@@ -42,7 +42,7 @@ import static org.camunda.bpm.webapp.impl.security.filter.headersec.provider.imp
     classes = { WebappTestApp.class },
     webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestPropertySource(properties = {
-    "camunda.bpm.webapp.applicationPath=" + ChangedAppPathIT.MY_APP_PATH
+    "flowave.bpm.webapp.applicationPath=" + ChangedAppPathIT.MY_APP_PATH
 })
 public class ChangedAppPathIT {
 

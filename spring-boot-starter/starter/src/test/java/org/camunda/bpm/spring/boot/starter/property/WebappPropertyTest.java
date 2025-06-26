@@ -27,12 +27,12 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @author Nikola Koevski
  */
 @TestPropertySource(properties = {
-  "camunda.bpm.webapp.indexRedirectEnabled=false",
-  "camunda.bpm.webapp.csrf.targetOrigin=localhost:8080",
-  "camunda.bpm.webapp.csrf.denyStatus=405",
-  "camunda.bpm.webapp.csrf.randomClass=java.util.Random",
-  "camunda.bpm.webapp.csrf.entryPoints[0]=/api/engine/engine/default/history/task/count",
-  "camunda.bpm.webapp.csrf.entryPoints[1]=/api/engine/engine/default/history/variable/count"
+  "flowave.bpm.webapp.indexRedirectEnabled=false",
+  "flowave.bpm.webapp.csrf.targetOrigin=localhost:8080",
+  "flowave.bpm.webapp.csrf.denyStatus=405",
+  "flowave.bpm.webapp.csrf.randomClass=java.util.Random",
+  "flowave.bpm.webapp.csrf.entryPoints[0]=/api/engine/engine/default/history/task/count",
+  "flowave.bpm.webapp.csrf.entryPoints[1]=/api/engine/engine/default/history/variable/count"
 })
 public class WebappPropertyTest extends ParsePropertiesHelper {
 

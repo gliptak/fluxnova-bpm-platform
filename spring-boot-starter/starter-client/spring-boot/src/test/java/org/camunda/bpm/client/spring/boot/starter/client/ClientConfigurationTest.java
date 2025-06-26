@@ -23,18 +23,18 @@ import org.springframework.test.context.TestPropertySource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @TestPropertySource(properties = {
-    "camunda.bpm.client.base-url=base-url",
-    "camunda.bpm.client.worker-id=worker-id",
-    "camunda.bpm.client.max-tasks=111",
-    "camunda.bpm.client.use-priority=false",
-    "camunda.bpm.client.default-serialization-format=serialization-format",
-    "camunda.bpm.client.date-format=date-format",
-    "camunda.bpm.client.async-response-timeout=555",
-    "camunda.bpm.client.lock-duration=777",
-    "camunda.bpm.client.disable-auto-fetching=true",
-    "camunda.bpm.client.disable-backoff-strategy=true",
-    "camunda.bpm.client.basic-auth.username=username",
-    "camunda.bpm.client.basic-auth.password=password",
+    "flowave.bpm.client.base-url=base-url",
+    "flowave.bpm.client.worker-id=worker-id",
+    "flowave.bpm.client.max-tasks=111",
+    "flowave.bpm.client.use-priority=false",
+    "flowave.bpm.client.default-serialization-format=serialization-format",
+    "flowave.bpm.client.date-format=date-format",
+    "flowave.bpm.client.async-response-timeout=555",
+    "flowave.bpm.client.lock-duration=777",
+    "flowave.bpm.client.disable-auto-fetching=true",
+    "flowave.bpm.client.disable-backoff-strategy=true",
+    "flowave.bpm.client.basic-auth.username=username",
+    "flowave.bpm.client.basic-auth.password=password",
 })
 public class ClientConfigurationTest extends ParsePropertiesHelper {
 

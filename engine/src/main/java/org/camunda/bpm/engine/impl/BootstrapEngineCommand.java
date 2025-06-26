@@ -40,7 +40,7 @@ public class BootstrapEngineCommand implements ProcessEngineBootstrapCommand {
 
   private final static EnginePersistenceLogger LOG = ProcessEngineLogger.PERSISTENCE_LOGGER;
 
-  protected static final String INSTALLATION_PROPERTY_NAME = "camunda.installation.id";
+  protected static final String INSTALLATION_PROPERTY_NAME = "flowave.installation.id";
 
   @Override
   public Void execute(CommandContext commandContext) {

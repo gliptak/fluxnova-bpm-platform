@@ -33,7 +33,7 @@ import static org.camunda.bpm.spring.boot.starter.configuration.id.IdGeneratorCo
 @SpringBootTest(
   classes = {TestApplication.class},
   properties = {
-    "camunda.bpm.id-generator=" + PREFIXED,
+    "flowave.bpm.id-generator=" + PREFIXED,
     "spring.application.name=myapp"
   })
 public class PrefixedUuidGeneratorIT {
