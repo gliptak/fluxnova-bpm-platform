@@ -152,7 +152,7 @@ describe('Admin Groups Spec', function() {
       // then
       testHelper.expectStringEqual(
         groupsPage.editGroup.pageHeader(),
-        'camunda BPM Administrators'
+        'Flowave BPM Administrators'
       );
       groupsPage.editGroup.isActive({group: 'flowave-admin'});
       expect(
@@ -168,7 +168,7 @@ describe('Admin Groups Spec', function() {
       // then
       testHelper.expectStringEqual(
         groupsPage.editGroup.pageHeader(),
-        'camunda BPM Administratorsi'
+        'Flowave BPM Administrators'
       );
     });
 
@@ -200,7 +200,7 @@ describe('Admin Groups Spec', function() {
       // then
       groupsPage.editGroupTenants.isActive({group: 'flowave-admin'});
       expect(groupsPage.editGroupTenants.subHeader()).to.eventually.eql(
-        "camunda BPM Administrators's" + ' ' + 'Tenants'
+        "Flowave BPM Administrators's" + ' ' + 'Tenants'
       );
       expect(
         groupsPage.editGroupTenants.tenantList().count()
