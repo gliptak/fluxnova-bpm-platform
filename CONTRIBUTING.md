@@ -108,7 +108,7 @@ without building dependencies locally.
    ```bash
    git clone https://github.com/finos/flowave-feel-scala
    cd flowave-feel-scala
-   # To skip tests:
+   # To skip tests (recommended for adopters only, contributors should always run tests):
    mvn clean install -DskipTests -DskipITs -o
 
    # To run all tests:
