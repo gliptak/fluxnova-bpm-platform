@@ -11,9 +11,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 import java.util.Iterator;
 import java.util.List;
 
@@ -28,14 +28,19 @@ public class MigratorService {
 
     protected static final Logger LOG = LoggerFactory.getLogger(MigratorService.class);
     private final String projectLocation;
+    private final String targetVersion;
+    private final String modelerVersion;
 
     /**
      * Constructs a new MigratorService with the specified project location.
      *
      * @param projectLocation The file system path to the project being migrated
+     * @param targetVersion The target Flowave version to migrate to
      */
-    public MigratorService(String projectLocation) {
+    public MigratorService(String projectLocation, String targetVersion, String modelerVersion) {
         this.projectLocation = projectLocation;
+        this.targetVersion = targetVersion;
+        this.modelerVersion = modelerVersion;
     }
 
     /**
@@ -87,10 +92,9 @@ public class MigratorService {
      */
     private void prepare(String pomFile, Model model) throws IOException {
         addPlugin(model);
-        addDependencies(model);
         writeModelToPom(pomFile, model);
         copyRewriteYml();
-        convertBpmnToXml(new File(projectLocation));
+        convertBpmnAndDmnToXml(new File(projectLocation));
     }
 
     /**
@@ -119,7 +123,7 @@ public class MigratorService {
         Plugin plugin = new Plugin();
         plugin.setGroupId("org.openrewrite.maven");
         plugin.setArtifactId("rewrite-maven-plugin");
-        plugin.setVersion("6.3.0");
+        plugin.setVersion("6.16.0");
         // Build <configuration> with <activeRecipes><recipe>...</recipe></activeRecipes>
         Xpp3Dom configuration = new Xpp3Dom("configuration");
         Xpp3Dom activeRecipes = new Xpp3Dom("activeRecipes");
@@ -140,34 +144,6 @@ public class MigratorService {
     }
 
     /**
-     * Adds the OpenRewrite dependencies to the project's POM file.
-     * These dependencies are required for the OpenRewrite plugin to function.
-     *
-     * @param model The Maven Model to modify
-     */
-    private void addDependencies(Model model) {
-
-        if (model.getDependencyManagement() == null) {
-            model.setDependencyManagement(new DependencyManagement());
-        }
-
-        DependencyManagement depMgmt = model.getDependencyManagement();
-
-        Dependency newDependency = new Dependency();
-        newDependency.setGroupId("org.openrewrite");
-        newDependency.setArtifactId("rewrite-core");
-        newDependency.setVersion("7.0.0");
-        depMgmt.addDependency(newDependency);
-
-        newDependency = new Dependency();
-        newDependency.setGroupId("org.openrewrite");
-        newDependency.setArtifactId("rewrite-java");
-        newDependency.setVersion("7.0.0");
-
-        depMgmt.addDependency(newDependency);
-    }
-
-    /**
      * Copies the rewrite.yml file containing the migration recipe to the project directory.
      * This file defines the transformations that will be applied to the codebase.
      */
@@ -178,10 +154,21 @@ public class MigratorService {
         try (InputStream inputStream = Migrator.class.getClassLoader().getResourceAsStream(rewriteYmlFile)) {
             Files.createDirectories(targetPath.getParent()); // create target dir if not exists
             assert inputStream != null;
-            Files.copy(inputStream, targetPath, StandardCopyOption.REPLACE_EXISTING);
-            LOG.info("Copied to " + targetPath);
+            
+            // Read the content as string
+            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+            
+            // Replace placeholders with actual values
+            String processedContent = content
+                .replace("{{TARGET_VERSION}}", targetVersion)
+                .replace("{{MODELER_VERSION}}", modelerVersion);
+            
+            // Write the processed content to target
+            Files.writeString(targetPath, processedContent, StandardCharsets.UTF_8);
+            System.out.println("Copied and processed rewrite.yml to " + targetPath);
 
         } catch (IOException e) {
+            LOG.error("Failed to copy and process rewrite.yml", e);
             e.printStackTrace();
         }
     }
@@ -204,7 +191,7 @@ public class MigratorService {
         removeDependencies(model);
         writeModelToPom(pomFile, model);
         deleteRewriteYml();
-        convertXmlToBpmn(new File(projectLocation));
+        convertXmlToBpmnAndDmn(new File(projectLocation));
     }
 
     /**
@@ -296,7 +283,7 @@ public class MigratorService {
         Invoker invoker = new DefaultInvoker();
         assert mavenHome != null;
         invoker.setMavenHome(new File(mavenHome));
-        invoker.setOutputHandler(LOG::info);
+        invoker.setOutputHandler(System.out::println);
         invoker.execute(request);
     }
 
@@ -338,20 +325,31 @@ public class MigratorService {
      *
      * @param folder The directory to process recursively
      */
-    void convertBpmnToXml(File folder) {
+    void convertBpmnAndDmnToXml(File folder) {
         File[] files = folder.listFiles();
         if (files == null) return;
 
         for (File file : files) {
             if (file.isDirectory()) {
-                convertBpmnToXml(file);
-            } else if (file.isFile() && file.getName().endsWith(".bpmn") && !file.getName().contains("__bpmn__")) {
-                String newName = file.getName().replace(".bpmn", "__bpmn__.xml");
-                File newFile = new File(file.getParent(), newName);
-                if (file.renameTo(newFile)) {
-                    LOG.info("Renamed to XML: " + file.getName() + " -> " + newName);
-                } else {
-                    LOG.info("Failed to rename: " + file.getAbsolutePath());
+                convertBpmnAndDmnToXml(file);
+            } else if (file.isFile()) {
+                String fileName = file.getName();
+                String newName = null;
+                // Handle .bpmn files
+                if (fileName.endsWith(".bpmn") && !fileName.contains("__bpmn__")) {
+                    newName = fileName.replace(".bpmn", "__bpmn__.xml");
+                }
+                // Handle .dmn files
+                else if (fileName.endsWith(".dmn") && !fileName.contains("__dmn__")) {
+                    newName = fileName.replace(".dmn", "__dmn__.xml");
+                }
+                if (newName != null) {
+                    File newFile = new File(file.getParent(), newName);
+                    if (file.renameTo(newFile)) {
+                        LOG.info("Renamed to XML: {} -> {}", fileName, newName);
+                    } else {
+                        LOG.error("Failed to rename: {}", file.getAbsolutePath());
+                    }
                 }
             }
         }
@@ -364,20 +362,31 @@ public class MigratorService {
      *
      * @param folder The directory to process recursively
      */
-    void convertXmlToBpmn(File folder) {
+    void convertXmlToBpmnAndDmn(File folder) {
         File[] files = folder.listFiles();
         if (files == null) return;
 
         for (File file : files) {
             if (file.isDirectory()) {
-                convertXmlToBpmn(file);
-            } else if (file.isFile() && file.getName().endsWith("__bpmn__.xml")) {
-                String newName = file.getName().replace("__bpmn__.xml", ".bpmn");
-                File newFile = new File(file.getParent(), newName);
-                if (file.renameTo(newFile)) {
-                    LOG.info("Reverted to BPMN: " + file.getName() + " -> " + newName);
-                } else {
-                    LOG.info("Failed to rename: " + file.getAbsolutePath());
+                convertXmlToBpmnAndDmn(file);
+            } else if (file.isFile()) {
+                String fileName = file.getName();
+                String newName = null;
+                // Handle __bpmn__.xml files
+                if (fileName.endsWith("__bpmn__.xml")) {
+                    newName = fileName.replace("__bpmn__.xml", ".bpmn");
+                }
+                // Handle __dmn__.xml files
+                else if (fileName.endsWith("__dmn__.xml")) {
+                    newName = fileName.replace("__dmn__.xml", ".dmn");
+                }
+                if (newName != null) {
+                    File newFile = new File(file.getParent(), newName);
+                    if (file.renameTo(newFile)) {
+                        LOG.info("Reverted to original format: {} -> {}", fileName, newName);
+                    } else {
+                        LOG.error("Failed to rename: {}", file.getAbsolutePath());
+                    }
                 }
             }
         }
