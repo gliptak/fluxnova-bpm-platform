@@ -28,6 +28,8 @@ class MigratorServiceTest {
 
     private MigratorService migratorService;
     private String projectLocation;
+    private String targetVersion = "0.0.1-SNAPSHOT";
+    private String modelerVersion = "0.0.1";
 
     @Mock
     private MavenXpp3Reader mavenReader;
@@ -44,7 +46,7 @@ class MigratorServiceTest {
     @BeforeEach
     void setUp() throws IOException {
         projectLocation = tempDir + File.separator;
-        migratorService = new MigratorService(projectLocation);
+        migratorService = new MigratorService(projectLocation, targetVersion, modelerVersion);
 
         // Create a minimal pom.xml file in the temp directory
         Path pomPath = Path.of(projectLocation + "pom.xml");
@@ -93,7 +95,7 @@ class MigratorServiceTest {
         Plugin plugin = plugins.get(0);
         assertEquals("org.openrewrite.maven", plugin.getGroupId());
         assertEquals("rewrite-maven-plugin", plugin.getArtifactId());
-        assertEquals("6.3.0", plugin.getVersion());
+        assertEquals("6.16.0", plugin.getVersion());
 
         // Verify configuration
         Xpp3Dom config = (Xpp3Dom) plugin.getConfiguration();
@@ -105,36 +107,6 @@ class MigratorServiceTest {
         Xpp3Dom[] recipeNodes = activeRecipes.getChildren("recipe");
         assertEquals(1, recipeNodes.length);
         assertEquals("camundaToFlowave", recipeNodes[0].getValue());
-    }
-
-    @Test
-    void testAddDependencies() throws Exception {
-        // Read the model from the test pom file
-        Model model = migratorService.readPomToModel(projectLocation + "pom.xml");
-
-        // Use reflection to access the private method
-        java.lang.reflect.Method addDependenciesMethod = MigratorService.class.getDeclaredMethod("addDependencies", Model.class);
-        addDependenciesMethod.setAccessible(true);
-        addDependenciesMethod.invoke(migratorService, model);
-
-        // Verify dependencies were added correctly
-        DependencyManagement depMgmt = model.getDependencyManagement();
-        assertNotNull(depMgmt);
-
-        List<Dependency> dependencies = depMgmt.getDependencies();
-        assertEquals(2, dependencies.size());
-
-        // Check first dependency
-        Dependency dep1 = dependencies.get(0);
-        assertEquals("org.openrewrite", dep1.getGroupId());
-        assertEquals("rewrite-core", dep1.getArtifactId());
-        assertEquals("7.0.0", dep1.getVersion());
-
-        // Check second dependency
-        Dependency dep2 = dependencies.get(1);
-        assertEquals("org.openrewrite", dep2.getGroupId());
-        assertEquals("rewrite-java", dep2.getArtifactId());
-        assertEquals("7.0.0", dep2.getVersion());
     }
 
     @Test
@@ -262,35 +234,63 @@ class MigratorServiceTest {
     }
 
     @Test
-    void convertBpmnToXml_ShouldRenameFiles() throws IOException {
+    void convertBpmnAndDmnToXml_ShouldRenameFiles() throws IOException {
         Path bpmnFile = Path.of(projectLocation + "process.bpmn");
+        Path dmnFile = Path.of(projectLocation + "decision.dmn");
+        
         Files.deleteIfExists(bpmnFile);
-        // Create test BPMN files
+        Files.deleteIfExists(dmnFile);
+        
+        // Create test BPMN and DMN files
         Files.createFile(bpmnFile);
-
+        Files.createFile(dmnFile);
+    
         // Execute conversion
-        migratorService.convertBpmnToXml(new File(tempDir));
-
+        migratorService.convertBpmnAndDmnToXml(new File(tempDir));
+    
+        // Verify BPMN conversion
         Path processXml = Path.of(projectLocation + "process__bpmn__.xml");
-        assertTrue(Files.exists(processXml), "Converted XML file should exist");
-
+        assertTrue(Files.exists(processXml), "Converted BPMN XML file should exist");
+        assertFalse(Files.exists(bpmnFile), "Original BPMN file should not exist after conversion");
+    
+        // Verify DMN conversion
+        Path decisionXml = Path.of(projectLocation + "decision__dmn__.xml");
+        assertTrue(Files.exists(decisionXml), "Converted DMN XML file should exist");
+        assertFalse(Files.exists(dmnFile), "Original DMN file should not exist after conversion");
+    
+        // Cleanup
         Files.deleteIfExists(processXml);
+        Files.deleteIfExists(decisionXml);
 
     }
 
     @Test
-    void convertXmlToBpmn_ShouldRenameFiles() throws IOException {
+    void convertXmlToBpmnAndDmn_ShouldRenameFiles() throws IOException {
         // Create test converted XML files
-        Path xmlFile = Path.of(projectLocation + "process__bpmn__.xml");
-        Files.deleteIfExists(xmlFile);
-        Files.createFile(xmlFile);
-
+        Path bpmnXmlFile = Path.of(projectLocation + "process__bpmn__.xml");
+        Path dmnXmlFile = Path.of(projectLocation + "decision__dmn__.xml");
+        
+        Files.deleteIfExists(bpmnXmlFile);
+        Files.deleteIfExists(dmnXmlFile);
+        Files.createFile(bpmnXmlFile);
+        Files.createFile(dmnXmlFile);
+    
         // Execute conversion
-        migratorService.convertXmlToBpmn(new File(tempDir));
-
+        migratorService.convertXmlToBpmnAndDmn(new File(tempDir));
+    
+        // Verify BPMN conversion
         Path processBpmn = Path.of(projectLocation + "process.bpmn");
-        assertTrue(Files.exists(processBpmn), "BPMN file should exist");
+        assertTrue(Files.exists(processBpmn), "BPMN file should exist after conversion");
+        assertFalse(Files.exists(bpmnXmlFile), "Original BPMN XML file should not exist after conversion");
+    
+        // Verify DMN conversion
+        Path decisionDmn = Path.of(projectLocation + "decision.dmn");
+        assertTrue(Files.exists(decisionDmn), "DMN file should exist after conversion");
+        assertFalse(Files.exists(dmnXmlFile), "Original DMN XML file should not exist after conversion");
+    
+        // Cleanup
         Files.deleteIfExists(processBpmn);
+        Files.deleteIfExists(decisionDmn);
     }
 
 }

@@ -50,17 +50,17 @@ The target project must be a valid Maven project with a pom.xml file
 ## Method 1: Using as a Project
 1. Clone this repository
 2. Build the project: `mvn clean install`
-3. Run the application by passing the target project location as below
+3. Run the application by passing the target project location and versions as below
    ![Migration execution screenshot](ss.png)
 
 ## Method 2: Using the JAR File
 1. Download the JAR file from the artifactory
-2. Run the migrator with your target project location as an argument `java -jar flowave-migrator-1.0-SNAPSHOT.jar "/path/to/your/project"`
+2. Run the migrator with your target project location and versions as an argument `java -jar flowave-migrator-1.0-SNAPSHOT.jar "/path/to/your/project" "0.0.1-SNAPSHOT" "1.0.0"`
 
 ## Method 3: Using Docker
 1. Find the docker file in the Migrator module
 2. Build the image using `docker build -t flowave-migrator .`
-3. Run the image using `docker run --rm -v "C:\path\to\your\project:/data" flowave-migrator /data`
+3. Run the image using `docker run --rm -v "C:\path\to\your\project:/data" flowave-migrator /data 0.0.1-SNAPSHOT 1.0.0`
 
 **Important Notes:**
 

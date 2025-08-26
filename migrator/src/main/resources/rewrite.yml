@@ -8,625 +8,1101 @@ recipeList:
       oldArtifactId: camunda-bpm-assert
       newGroupId: org.finos.flowave.bpm.assert
       newArtifactId: flowave-bpm-assert
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-bpm-archunit
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-bpm-archunit
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-bpm-assert
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-bpm-assert
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-bpm-assert-qa
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-bpm-assert-qa
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-bpm-junit5
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-bpm-junit5
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-cdi
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine-cdi
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-cdi-jakarta
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine-cdi-jakarta
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-plugin-connect
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine-plugin-connect
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-plugin-spin
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine-plugin-spin
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-rest
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine-rest
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-rest-core
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine-rest-core
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-rest-core-jakarta
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine-rest-core-jakarta
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-rest-jakarta
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine-rest-jakarta
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-rest-jaxrs2
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine-rest-jaxrs2
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-rest-openapi
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine-rest-openapi
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-rest-openapi-generator
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine-rest-openapi-generator
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-spring
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine-spring
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-spring-6
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-engine-spring-6
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-external-task-client
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-external-task-client
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-external-task-client-spring
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-external-task-client-spring
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-license-check
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-license-check
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-license-check
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-license-check
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-test-utils-testcontainers
       newGroupId: org.finos.flowave.bpm
       newArtifactId: flowave-test-utils-testcontainers
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.distro
       oldArtifactId: camunda-sql-scripts
       newGroupId: org.finos.flowave.bpm.distro
       newArtifactId: flowave-sql-scripts
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.dmn
       oldArtifactId: camunda-dmn-junit5
       newGroupId: org.finos.flowave.bpm.dmn
       newArtifactId: flowave-dmn-junit5
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.dmn
       oldArtifactId: camunda-engine-dmn
       newGroupId: org.finos.flowave.bpm.dmn
       newArtifactId: flowave-engine-dmn
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.dmn
       oldArtifactId: camunda-engine-feel-api
       newGroupId: org.finos.flowave.bpm.dmn
       newArtifactId: flowave-engine-feel-api
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.dmn
       oldArtifactId: camunda-engine-feel-juel
       newGroupId: org.finos.flowave.bpm.dmn
       newArtifactId: flowave-engine-feel-juel
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.dmn
       oldArtifactId: camunda-engine-feel-scala
       newGroupId: org.finos.flowave.bpm.dmn
       newArtifactId: flowave-engine-feel-scala
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.example
       oldArtifactId: camunda-example-invoice
       newGroupId: org.finos.flowave.bpm.example
       newArtifactId: flowave-example-invoice
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.example
       oldArtifactId: camunda-example-invoice-jakarta
       newGroupId: org.finos.flowave.bpm.example
       newArtifactId: flowave-example-invoice-jakarta
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.extension
       oldArtifactId: camunda-bpm-assert-scenario
       newGroupId: org.finos.flowave.bpm.extension
       newArtifactId: flowave-bpm-assert-scenario
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.extension
       oldArtifactId: camunda-bpm-junit5
       newGroupId: org.finos.flowave.bpm.extension
       newArtifactId: flowave-bpm-junit5
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.extension
       oldArtifactId: camunda-bpm-process-test-coverage
       newGroupId: org.finos.flowave.bpm.extension
       newArtifactId: flowave-bpm-process-test-coverage
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.extension.dmn.scala
       oldArtifactId: dmn-engine
       newGroupId: org.finos.flowave.bpm.extension.dmn.scala
       newArtifactId: dmn-engine
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.extension.mockito
       oldArtifactId: camunda-bpm-mockito
       newGroupId: org.finos.flowave.bpm.extension.mockito
       newArtifactId: flowave-bpm-mockito
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.extension.reactor
       oldArtifactId: camunda-bpm-reactor-core
       newGroupId: org.finos.flowave.bpm.extension.reactor
       newArtifactId: flowave-bpm-reactor-core
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.extension.reactor
       oldArtifactId: camunda-bpm-reactor-eventbus
       newGroupId: org.finos.flowave.bpm.extension.reactor
       newArtifactId: flowave-bpm-reactor-eventbus
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.extension.reactor
       oldArtifactId: camunda-bpm-reactor-spring
       newGroupId: org.finos.flowave.bpm.extension.reactor
       newArtifactId: flowave-bpm-reactor-spring
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.extension.reactor
       oldArtifactId: camunda-bpm-reactor-spring-starter
       newGroupId: org.finos.flowave.bpm.extension.reactor
       newArtifactId: flowave-bpm-reactor-spring-starter
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.getstarted
       oldArtifactId: loan-approval-spring-boot
       newGroupId: org.finos.flowave.bpm.getstarted
       newArtifactId: loan-approval-spring-boot
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.identity
       oldArtifactId: camunda-identity-ldap
       newGroupId: org.finos.flowave.bpm.identity
       newArtifactId: flowave-identity-ldap
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.javaee
       oldArtifactId: camunda-ejb-client
       newGroupId: org.finos.flowave.bpm.javaee
       newArtifactId: flowave-ejb-client
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.javaee
       oldArtifactId: camunda-ejb-client-jakarta
       newGroupId: org.finos.flowave.bpm.javaee
       newArtifactId: flowave-ejb-client-jakarta
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.javaee
       oldArtifactId: camunda-ejb-service
       newGroupId: org.finos.flowave.bpm.javaee
       newArtifactId: flowave-ejb-service
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.javaee
       oldArtifactId: camunda-jobexecutor-ra
       newGroupId: org.finos.flowave.bpm.javaee
       newArtifactId: flowave-jobexecutor-ra
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.juel
       oldArtifactId: camunda-juel
       newGroupId: org.finos.flowave.bpm.juel
       newArtifactId: flowave-juel
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.model
       oldArtifactId: camunda-bpmn-model
       newGroupId: org.finos.flowave.bpm.model
       newArtifactId: flowave-bpmn-model
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.model
       oldArtifactId: camunda-cmmn-model
       newGroupId: org.finos.flowave.bpm.model
       newArtifactId: flowave-cmmn-model
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.model
       oldArtifactId: camunda-dmn-model
       newGroupId: org.finos.flowave.bpm.model
       newArtifactId: flowave-dmn-model
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.model
       oldArtifactId: camunda-xml-model
       newGroupId: org.finos.flowave.bpm.model
       newArtifactId: flowave-xml-model
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.qa
       oldArtifactId: camunda-qa-ensure-clean-db
       newGroupId: org.finos.flowave.bpm.qa
       newArtifactId: flowave-qa-ensure-clean-db
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.qa
       oldArtifactId: camunda-qa-integration-tests-engine-jakarta
       newGroupId: org.finos.flowave.bpm.qa
       newArtifactId: flowave-qa-integration-tests-engine-jakarta
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.qa
       oldArtifactId: camunda-qa-integration-tests-webapps
       newGroupId: org.finos.flowave.bpm.qa
       newArtifactId: flowave-qa-integration-tests-webapps
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.qa
       oldArtifactId: engine-variable-test
       newGroupId: org.finos.flowave.bpm.qa
       newArtifactId: engine-variable-test
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.quarkus
       oldArtifactId: camunda-bpm-quarkus-engine
       newGroupId: org.finos.flowave.bpm.quarkus
       newArtifactId: flowave-bpm-quarkus-engine
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.quarkus
       oldArtifactId: camunda-bpm-quarkus-engine-deployment
       newGroupId: org.finos.flowave.bpm.quarkus
       newArtifactId: flowave-bpm-quarkus-engine-deployment
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.quarkus
       oldArtifactId: camunda-bpm-quarkus-engine-qa
       newGroupId: org.finos.flowave.bpm.quarkus
       newArtifactId: flowave-bpm-quarkus-engine-qa
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.run
       oldArtifactId: camunda-bpm-run-core
       newGroupId: org.finos.flowave.bpm.run
       newArtifactId: flowave-bpm-run-core
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.run
       oldArtifactId: camunda-bpm-run-example-plugin
       newGroupId: org.finos.flowave.bpm.run
       newArtifactId: flowave-bpm-run-example-plugin
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.run
       oldArtifactId: camunda-bpm-run-modules-example-invoice
       newGroupId: org.finos.flowave.bpm.run
       newArtifactId: flowave-bpm-run-modules-example-invoice
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.run
       oldArtifactId: camunda-bpm-run-qa-integration-tests
       newGroupId: org.finos.flowave.bpm.run
       newArtifactId: flowave-bpm-run-qa-integration-tests
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.run
       oldArtifactId: camunda-bpm-run-qa-runtime
       newGroupId: org.finos.flowave.bpm.run
       newArtifactId: flowave-bpm-run-qa-runtime
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot
       oldArtifactId: camunda-bpm-spring-boot-starter
       newGroupId: org.finos.flowave.bpm.springboot
       newArtifactId: flowave-bpm-spring-boot-starter
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot
       oldArtifactId: camunda-bpm-spring-boot-starter-external-task-client
       newGroupId: org.finos.flowave.bpm.springboot
       newArtifactId: flowave-bpm-spring-boot-starter-external-task-client
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot
       oldArtifactId: camunda-bpm-spring-boot-starter-rest
       newGroupId: org.finos.flowave.bpm.springboot
       newArtifactId: flowave-bpm-spring-boot-starter-rest
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot
       oldArtifactId: camunda-bpm-spring-boot-starter-security
       newGroupId: org.finos.flowave.bpm.springboot
       newArtifactId: flowave-bpm-spring-boot-starter-security
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot
       oldArtifactId: camunda-bpm-spring-boot-starter-test
       newGroupId: org.finos.flowave.bpm.springboot
       newArtifactId: flowave-bpm-spring-boot-starter-test
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot
       oldArtifactId: camunda-bpm-spring-boot-starter-webapp
       newGroupId: org.finos.flowave.bpm.springboot
       newArtifactId: flowave-bpm-spring-boot-starter-webapp
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot
       oldArtifactId: camunda-bpm-spring-boot-starter-webapp-core
       newGroupId: org.finos.flowave.bpm.springboot
       newArtifactId: flowave-bpm-spring-boot-starter-webapp-core
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot
       oldArtifactId: camunda-bpm-spring-boot-starter-webapp-ee
       newGroupId: org.finos.flowave.bpm.springboot
       newArtifactId: flowave-bpm-spring-boot-starter-webapp-ee
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot.project
       oldArtifactId: qa-liquibase
       newGroupId: org.finos.flowave.bpm.springboot.project
       newArtifactId: qa-liquibase
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot.project
       oldArtifactId: qa-plugins-spin-dataformat-all
       newGroupId: org.finos.flowave.bpm.springboot.project
       newArtifactId: qa-plugins-spin-dataformat-all
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot.project
       oldArtifactId: qa-plugins-spin-dataformat-json-jackson
       newGroupId: org.finos.flowave.bpm.springboot.project
       newArtifactId: qa-plugins-spin-dataformat-json-jackson
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot.project
       oldArtifactId: qa-request-scope
       newGroupId: org.finos.flowave.bpm.springboot.project
       newArtifactId: qa-request-scope
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot.project
       oldArtifactId: qa-simple
       newGroupId: org.finos.flowave.bpm.springboot.project
       newArtifactId: qa-simple
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot.project
       oldArtifactId: qa-webapp-ce-runtime
       newGroupId: org.finos.flowave.bpm.springboot.project
       newArtifactId: qa-webapp-ce-runtime
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.springboot.project
       oldArtifactId: qa-webapp-invoice-example
       newGroupId: org.finos.flowave.bpm.springboot.project
       newArtifactId: qa-webapp-invoice-example
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.webapp
       oldArtifactId: camunda-webapp
       newGroupId: org.finos.flowave.bpm.webapp
       newArtifactId: flowave-webapp
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.webapp
       oldArtifactId: camunda-webapp-ee-plugins
       newGroupId: org.finos.flowave.bpm.webapp
       newArtifactId: flowave-webapp-ee-plugins
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.webapp
       oldArtifactId: camunda-webapp-ee-plugins-jakarta
       newGroupId: org.finos.flowave.bpm.webapp
       newArtifactId: flowave-webapp-ee-plugins-jakarta
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.webapp
       oldArtifactId: camunda-webapp-jakarta
       newGroupId: org.finos.flowave.bpm.webapp
       newArtifactId: flowave-webapp-jakarta
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.webapp
       oldArtifactId: camunda-webapp-webjar
       newGroupId: org.finos.flowave.bpm.webapp
       newArtifactId: flowave-webapp-webjar
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.webapp
       oldArtifactId: camunda-webapp-webjar-ee
       newGroupId: org.finos.flowave.bpm.webapp
       newArtifactId: flowave-webapp-webjar-ee
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.wildfly
       oldArtifactId: camunda-wildfly-modules
       newGroupId: org.finos.flowave.bpm.wildfly
       newArtifactId: flowave-wildfly-modules
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.wildfly
       oldArtifactId: camunda-wildfly-subsystem
       newGroupId: org.finos.flowave.bpm.wildfly
       newArtifactId: flowave-wildfly-subsystem
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.wildfly
       oldArtifactId: camunda-wildfly26-modules
       newGroupId: org.finos.flowave.bpm.wildfly
       newArtifactId: flowave-wildfly26-modules
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.wildfly
       oldArtifactId: camunda-wildfly26-subsystem
       newGroupId: org.finos.flowave.bpm.wildfly
       newArtifactId: flowave-wildfly26-subsystem
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.commons
       oldArtifactId: camunda-commons-logging
       newGroupId: org.finos.flowave.commons
       newArtifactId: flowave-commons-logging
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.commons
       oldArtifactId: camunda-commons-testing
       newGroupId: org.finos.flowave.commons
       newArtifactId: flowave-commons-testing
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.commons
       oldArtifactId: camunda-commons-typed-values
       newGroupId: org.finos.flowave.commons
       newArtifactId: flowave-commons-typed-values
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.commons
       oldArtifactId: camunda-commons-utils
       newGroupId: org.finos.flowave.commons
       newArtifactId: flowave-commons-utils
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.connect
       oldArtifactId: camunda-connect-connectors-all
       newGroupId: org.finos.flowave.connect
       newArtifactId: flowave-connect-connectors-all
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.connect
       oldArtifactId: camunda-connect-core
       newGroupId: org.finos.flowave.connect
       newArtifactId: flowave-connect-core
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.connect
       oldArtifactId: camunda-connect-http-client
       newGroupId: org.finos.flowave.connect
       newArtifactId: flowave-connect-http-client
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.connect
       oldArtifactId: camunda-connect-soap-http-client
       newGroupId: org.finos.flowave.connect
       newArtifactId: flowave-connect-soap-http-client
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.feel
       oldArtifactId: feel-engine
       newGroupId: org.finos.flowave.feel
       newArtifactId: feel-engine
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.spin
       oldArtifactId: camunda-spin-core
       newGroupId: org.finos.flowave.spin
       newArtifactId: flowave-spin-core
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.spin
       oldArtifactId: camunda-spin-dataformat-all
       newGroupId: org.finos.flowave.spin
       newArtifactId: flowave-spin-dataformat-all
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.spin
       oldArtifactId: camunda-spin-dataformat-json-jackson
       newGroupId: org.finos.flowave.spin
       newArtifactId: flowave-spin-dataformat-json-jackson
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.spin
       oldArtifactId: camunda-spin-dataformat-xml-dom
       newGroupId: org.finos.flowave.spin
       newArtifactId: flowave-spin-dataformat-xml-dom
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.spin
       oldArtifactId: camunda-spin-dataformat-xml-dom-jakarta
       newGroupId: org.finos.flowave.spin
       newArtifactId: flowave-spin-dataformat-xml-dom-jakarta
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.template-engines
       oldArtifactId: camunda-template-engines-freemarker
       newGroupId: org.finos.flowave.template-engines
       newArtifactId: flowave-template-engines-freemarker
-      newVersion: 1.0.0
+      newVersion: {{TARGET_VERSION}}
+  - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
+      oldGroupId: org.camunda.bpm
+      oldArtifactId: camunda-bom
+      newGroupId: org.finos.flowave.bpm
+      newArtifactId: flowave-bom
+      newVersion: {{TARGET_VERSION}}
+  - org.openrewrite.xml.ChangeTagName:
+      elementName: /project/properties/camunda.version
+      newName: flowave.version
+  - org.openrewrite.xml.ChangeTagValue:
+        elementName: /project/properties/flowave.version
+        newValue: {{TARGET_VERSION}}
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.engine.test.assertions.helpers.CamundaMatchers
+      replace: org.finos.flowave.bpm.engine.test.assertions.helpers.FlowaveMatchers
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.quarkus.engine.extension.event.CamundaEngineStartupEvent
+      replace: org.finos.flowave.bpm.quarkus.engine.extension.event.FlowaveEngineStartupEvent
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.quarkus.engine.extension.impl.CamundaEngineRecorder
+      replace: org.finos.flowave.bpm.quarkus.engine.extension.impl.FlowaveEngineRecorder
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.quarkus.engine.extension.impl.CamundaEngineConfig
+      replace: org.finos.flowave.bpm.quarkus.engine.extension.impl.FlowaveEngineConfig
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.quarkus.engine.extension.impl.CamundaJobExecutorConfig
+      replace: org.finos.flowave.bpm.quarkus.engine.extension.impl.FlowaveJobExecutorConfig
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.quarkus.engine.extension.deployment.impl.CamundaEngineProcessor
+      replace: org.finos.flowave.bpm.quarkus.engine.extension.deployment.impl.FlowaveEngineProcessor
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.property.CamundaBpmRunAdministratorAuthorizationProperties
+      replace: org.finos.flowave.bpm.run.property.FlowaveBpmRunAdministratorAuthorizationProperties
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.property.CamundaBpmRunAuthenticationProperties
+      replace: org.finos.flowave.bpm.run.property.FlowaveBpmRunAuthenticationProperties
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.property.CamundaBpmRunCorsProperty
+      replace: org.finos.flowave.bpm.run.property.FlowaveBpmRunCorsProperty
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.property.CamundaBpmRunDeploymentProperties
+      replace: org.finos.flowave.bpm.run.property.FlowaveBpmRunDeploymentProperties
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.property.CamundaBpmRunLdapProperties
+      replace: org.finos.flowave.bpm.run.property.FlowaveBpmRunLdapProperties
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.property.CamundaBpmRunProcessEnginePluginProperty
+      replace: org.finos.flowave.bpm.run.property.FlowaveBpmRunProcessEnginePluginProperty
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.property.CamundaBpmRunProperties
+      replace: org.finos.flowave.bpm.run.property.FlowaveBpmRunProperties
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.property.CamundaBpmRunRestProperties
+      replace: org.finos.flowave.bpm.run.property.FlowaveBpmRunRestProperties
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.utils.CamundaBpmRunLogger
+      replace: org.finos.flowave.bpm.run.utils.FlowaveBpmRunLogger
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.utils.CamundaBpmRun
+      replace: org.finos.flowave.bpm.run.utils.FlowaveBpmRun
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.utils.CamundaBpmRunConfiguration
+      replace: org.finos.flowave.bpm.run.utils.FlowaveBpmRunConfiguration
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.utils.CamundaBpmRunDeploymentConfiguration
+      replace: org.finos.flowave.bpm.run.utils.FlowaveBpmRunDeploymentConfiguration
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.utils.CamundaBpmRunProcessEngineConfiguration
+      replace: org.finos.flowave.bpm.run.utils.FlowaveBpmRunProcessEngineConfiguration
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.run.utils.CamundaBpmRunRestConfiguration
+      replace: org.finos.flowave.bpm.run.utils.FlowaveBpmRunRestConfiguration
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.builder.CamundaErrorEventDefinitionBuilder
+      replace: org.finos.flowave.bpm.model.bpmn.builder.FlowaveErrorEventDefinitionBuilder
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.builder.CamundaStartEventFormFieldBuilder
+      replace: org.finos.flowave.bpm.model.bpmn.builder.FlowaveStartEventFormFieldBuilder
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.builder.CamundaUserTaskFormFieldBuilder
+      replace: org.finos.flowave.bpm.model.bpmn.builder.FlowaveUserTaskFormFieldBuilder
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.camunda.FlowaveConnectorIdImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveConnectorIdImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.camunda.CamundaConnectorImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveConnectorImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.camunda.FlowaveConstraintImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveConstraintImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.camunda.FlowaveEntryImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveEntryImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.camunda.FlowaveErrorEventDefinitionImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveErrorEventDefinitionImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.camunda.FlowaveExecutionListenerImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveExecutionListenerImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.camunda.FlowaveExpressionImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveExpressionImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.camunda.FlowaveFailedJobRetryTimeCycleImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveFailedJobRetryTimeCycleImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.camunda.FlowaveFieldImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveFieldImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.camunda.FlowaveFormDataImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveFormDataImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.camunda.FlowaveFormFieldImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveFormFieldImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.camunda.FlowaveFormPropertyImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveFormPropertyImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.camunda.FlowaveGenericValueElementImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveGenericValueElementImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaInImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveInImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaInputOutputImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveInputOutputImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaInputParameterImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveInputParameterImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaListImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveListImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaMapImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveMapImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaOutImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveOutImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaOutputParameterImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveOutputParameterImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaPotentialStarterImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowavePotentialStarterImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaPropertiesImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowavePropertiesImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaPropertyImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowavePropertyImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaScriptImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveScriptImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaStringImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveStringImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaTaskListenerImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveTaskListenerImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaValidationImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveValidationImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.impl.instance.Camunda.CamundaValueImpl
+      replace: org.finos.flowave.bpm.model.bpmn.impl.instance.flowave.FlowaveValueImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaConnector
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveConnector
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaConnectorId
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveConnectorId
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaConstraint
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveConstraint
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaEntry
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveEntry
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaErrorEventDefinition
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveErrorEventDefinition
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaExecutionListener
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveExecutionListener
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaExpression
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveExpression
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaFailedJobRetryTimeCycle
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveFailedJobRetryTimeCycle
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaField
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveField
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaFormData
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveFormData
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaFormField
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveFormField
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaFormProperty
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveFormProperty
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaGenericValueElement
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveGenericValueElement
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaIn
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveIn
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaInputOutput
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveInputOutput
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaInputParameter
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveInputParameter
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaList
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveList
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaMap
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveMap
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaOut
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveOut
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaOutputParameter
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveOutputParameter
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaPotentialStarter
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowavePotentialStarter
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaProperties
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveProperties
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaProperty
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveProperty
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaScript
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveScript
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaString
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveString
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaTaskListener
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveTaskListener
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaValidation
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveValidation
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.bpmn.instance.Camunda.CamundaValue
+      replace: org.finos.flowave.bpm.model.bpmn.instance.flowave.FlowaveValue
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.impl.instance.Camunda.CamundaCaseExecutionListenerImpl
+      replace: org.finos.flowave.bpm.model.cmmn.impl.instance.flowave.FlowaveCaseExecutionListenerImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.impl.instance.Camunda.CamundaExpressionImpl
+      replace: org.finos.flowave.bpm.model.cmmn.impl.instance.flowave.FlowaveExpressionImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.impl.instance.Camunda.CamundaFieldImpl
+      replace: org.finos.flowave.bpm.model.cmmn.impl.instance.flowave.FlowaveFieldImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.impl.instance.Camunda.CamundaInImpl
+      replace: org.finos.flowave.bpm.model.cmmn.impl.instance.flowave.FlowaveInImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.impl.instance.Camunda.CamundaOutImpl
+      replace: org.finos.flowave.bpm.model.cmmn.impl.instance.flowave.FlowaveOutImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.impl.instance.Camunda.CamundaScriptImpl
+      replace: org.finos.flowave.bpm.model.cmmn.impl.instance.flowave.FlowaveScriptImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.impl.instance.Camunda.CamundaStringImpl
+      replace: org.finos.flowave.bpm.model.cmmn.impl.instance.flowave.FlowaveStringImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.impl.instance.Camunda.CamundaTaskListenerImpl
+      replace: org.finos.flowave.bpm.model.cmmn.impl.instance.flowave.FlowaveTaskListenerImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.impl.instance.Camunda.CamundaVariableListenerImpl
+      replace: org.finos.flowave.bpm.model.cmmn.impl.instance.flowave.FlowaveVariableListenerImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.impl.instance.Camunda.CamundaVariableOnPartImpl
+      replace: org.finos.flowave.bpm.model.cmmn.impl.instance.flowave.FlowaveVariableOnPartImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.impl.instance.Camunda.CamundaVariableTransitionEventImpl
+      replace: org.finos.flowave.bpm.model.cmmn.impl.instance.flowave.FlowaveVariableTransitionEventImpl
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.instance.Camunda.CamundaCaseExecutionListener
+      replace: org.finos.flowave.bpm.model.cmmn.instance.flowave.FlowaveCaseExecutionListener
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.instance.Camunda.CamundaExpression
+      replace: org.finos.flowave.bpm.model.cmmn.instance.flowave.FlowaveExpression
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.instance.Camunda.CamundaField
+      replace: org.finos.flowave.bpm.model.cmmn.instance.flowave.FlowaveField
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.instance.Camunda.CamundaIn
+      replace: org.finos.flowave.bpm.model.cmmn.instance.flowave.FlowaveIn
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.instance.Camunda.CamundaOut
+      replace: org.finos.flowave.bpm.model.cmmn.instance.flowave.FlowaveOut
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.instance.Camunda.CamundaScript
+      replace: org.finos.flowave.bpm.model.cmmn.instance.flowave.FlowaveScript
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.instance.Camunda.CamundaString
+      replace: org.finos.flowave.bpm.model.cmmn.instance.flowave.FlowaveString
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.instance.Camunda.CamundaTaskListener
+      replace: org.finos.flowave.bpm.model.cmmn.instance.flowave.FlowaveTaskListener
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.instance.Camunda.CamundaVariableListener
+      replace: org.finos.flowave.bpm.model.cmmn.instance.flowave.FlowaveVariableListener
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.instance.Camunda.CamundaVariableOnPart
+      replace: org.finos.flowave.bpm.model.cmmn.instance.flowave.FlowaveVariableOnPart
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.model.cmmn.instance.Camunda.CamundaVariableTransitionEvent
+      replace: org.finos.flowave.bpm.model.cmmn.instance.flowave.FlowaveVariableTransitionEvent
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.engine.form.CamundaFormRef
+      replace: org.finos.flowave.bpm.engine.form.FlowaveFormRef
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.engine.impl.bpmn.helper.parser.CamundaErrorEventDefinition
+      replace: org.finos.flowave.bpm.engine.impl.bpmn.helper.parser.FlowaveErrorEventDefinition
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.engine.impl.diagnostics.CamundaIntegration
+      replace: org.finos.flowave.bpm.engine.impl.diagnostics.FlowaveIntegration
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.engine.form.deployer.CamundaFormDefinitionDeployer
+      replace: org.finos.flowave.bpm.engine.form.deployer.FlowaveFormDefinitionDeployer
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.engine.entity.CamundaFormDefinitionManager
+      replace: org.finos.flowave.bpm.engine.entity.FlowaveFormDefinitionManager
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.engine.scripting.engine.CamundaScriptEngineManager
+      replace: org.finos.flowave.bpm.engine.scripting.engine.FlowaveScriptEngineManager
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.engine.repository.CamundaFormDefinition
+      replace: org.finos.flowave.bpm.engine.repository.FlowaveFormDefinition
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.engine.test.api.form.RetrieveCamundaFormRefTest
+      replace: org.finos.flowave.bpm.engine.test.api.form.RetrieveFlowaveFormRefTest
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.engine.test.bpmn.CamundaFormDefinitionStrictParseTest
+      replace: org.finos.flowave.bpm.engine.test.bpmn.FlowaveFormDefinitionStrictParseTest
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.engine.cdi.compat.CamundaTaskForm
+      replace: org.finos.flowave.bpm.engine.cdi.compat.FlowaveTaskForm
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.engine.rest.impl.CamundaRestResources
+      replace: org.finos.flowave.bpm.engine.rest.impl.FlowaveRestResources
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.bpm.engine.rest.dto.CamundaQueryParam
+      replace: org.finos.flowave.bpm.engine.rest.dto.FlowaveQueryParam
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.impl.test.utils.testcontainers.CamundaMSSQLContainerProvider
+      replace: org.finos.flowave.impl.test.utils.testcontainers.FlowaveMSSQLContainerProvider
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.impl.test.utils.testcontainers.CamundaMySqlContainerProvider
+      replace: org.finos.flowave.impl.test.utils.testcontainers.FlowaveMySqlContainerProvider
+      filePattern: '**/*.java'
+  - org.openrewrite.text.FindAndReplace:
+      find: org.camunda.impl.test.utils.testcontainers.CamundaPostgreSQLContainerProvider
+      replace: org.finos.flowave.impl.test.utils.testcontainers.FlowavePostgreSQLContainerProvider
+      filePattern: '**/*.java'
   - org.openrewrite.text.FindAndReplace:
       find: "org.camunda"
       replace: "org.finos.flowave"
@@ -638,9 +1114,48 @@ recipeList:
   - org.openrewrite.xml.ChangeTagAttribute:
       elementName: process-application
       attributeName: xmlns
-      newValue: "http://www.flowave.org/schema/1.0/ProcessApplication"
-      oldValue: "http://www.camunda.org/schema/1.0/ProcessApplication"
-  - org.openrewrite.text.FindAndReplace:
-      find: " camunda:"
-      replace: " flowave:"
-      filePattern: '**/*.xml'
+      newValue: "http://www.flowave.finos.org/schema/1.0/ProcessApplication"
+  - org.openrewrite.xml.AddTagAttribute:
+      elementName: bpmn:definitions
+      attributeName: xmlns:flowave
+      newValue: "http://flowave.finos.org/schema/1.0/bpmn"
+  - org.openrewrite.xml.ChangeTagAttribute:
+      elementName: bpmn:definitions
+      attributeName: xmlns:modeler
+      newValue: "http://flowave.finos.org/schema/modeler/1.0/"
+  - org.openrewrite.xml.ChangeTagAttribute:
+      elementName: bpmn:definitions
+      attributeName: modeler:executionPlatform
+      newValue: "Flowave Platform"
+  - org.openrewrite.xml.ChangeTagAttribute:
+      elementName: bpmn:definitions
+      attributeName: modeler:executionPlatformVersion
+      newValue: {{TARGET_VERSION}}
+  - org.openrewrite.xml.ChangeTagAttribute:
+      elementName: bpmn:definitions
+      attributeName: exporter
+      newValue: "Flowave Modeler"
+  - org.openrewrite.xml.ChangeTagAttribute:
+      elementName: bpmn:definitions
+      attributeName: exporterVersion
+      newValue: {{MODELER_VERSION}}
+  - org.openrewrite.xml.AddTagAttribute:
+        elementName: dmn:definitions
+        attributeName: xmlns:flowave
+        newValue: "http://flowave.finos.org/schema/1.0/dmn"
+  - org.openrewrite.xml.ChangeTagAttribute:
+        elementName: dmn:definitions
+        attributeName: xmlns:modeler
+        newValue: "http://flowave.finos.org/schema/modeler/1.0/"
+  - org.openrewrite.xml.ChangeTagAttribute:
+        elementName: dmn:definitions
+        attributeName: namespace
+        newValue: "http://flowave.finos.org/schema/1.0/dmn"
+  - org.openrewrite.xml.ChangeTagAttribute:
+        elementName: dmn:definitions
+        attributeName: exporter
+        newValue: "Flowave Modeler"
+  - org.openrewrite.xml.ChangeTagAttribute:
+        elementName: dmn:definitions
+        attributeName: exporterVersion
+        newValue: {{MODELER_VERSION}}
