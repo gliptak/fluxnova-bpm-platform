@@ -56,32 +56,35 @@ without building dependencies locally.
    cd fluxnova-bpm-release-parent
    mvn clean install -o
    ```
+
 3. **Clone and Build `fluxnova-feel-scala` Repository**
 
    This repository is a dependency for `fluxnova-bpm-platform`.
 
    ```bash
    git clone https://github.com/finos/fluxnova-feel-scala
-   cd fluxnova-feel-scala ```
-   
-   **To Skip Test : ** mvn clean install -DskipTests -DskipITs -o
- 
-   ** To run all Tests: ** mvn clean install -o
-   
-   
+   cd fluxnova-feel-scala
+   # To skip tests:
+   mvn clean install -DskipTests -DskipITs -o
+
+   # To run all tests:
+   mvn clean install -o
+   ```
+
 4. **Clone and Build `fluxnova-bpm-platform` Repository**
 
    Finally, build the main project. You can skip tests or run them as needed.
 
    ```bash
    git clone https://github.com/finos/fluxnova-bpm-platform
-   cd fluxnova-bpm-platform ```
-  
-   **To Skip Test : ** mvn clean install -DskipTests -DskipITs -o
+   cd fluxnova-bpm-platform
+   # To skip tests:
+   mvn clean install -DskipTests -DskipITs -o
 
-   ** To run all Tests: ** mvn clean install -o
-   
-   
+   # To run all tests:
+   mvn clean install -o
+   ```
+
 ### Notes
 
 - The `-o` flag enables Maven offline mode, so it uses dependencies from your local `.m2/repository/org/fluxnova` directory.
@@ -101,6 +104,7 @@ The `fluxnova-bpm-platform` project uses GitHub Actions for automated CI/CD on F
 - **Manual Trigger:**  
   You can manually trigger the workflow from the GitHub Actions tab using the "Run workflow" button.  
   When using this manual trigger (`workflow_dispatch`), you can select which branch to build.
+
 ### Steps in the Workflow
 
 1. **Checkout Repository:**  
@@ -189,7 +193,6 @@ to access these packages securely.
 - Go to the [Packages](https://github.com/orgs/finos/packages?q=org.fluxnova&tab=packages&q=org.finos.fluxnova) section of the repository on GitHub to view published artifacts.
 - These packages can be used as dependencies in other projects via GitHub Packages.
 
-
 ## Running Fluxnova BPM Platform
 
 You can run Fluxnova in two modes: **Tomcat** and **Spring Boot**.
@@ -225,4 +228,3 @@ You can run Fluxnova in two modes: **Tomcat** and **Spring Boot**.
    sh start.sh
    ```
 4. Access the Fluxnova Monitoring at [http://localhost:8080/camunda/app/monitoring/default/#/dashboard](http://localhost:8080/camunda/app/monitoring/default/#/dashboard)
-   
