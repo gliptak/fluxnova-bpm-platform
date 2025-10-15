@@ -139,7 +139,7 @@ sure that the database image is configured according to [this guide](https://doc
 
 * PostgreSQL
 * MySQL
-* MS-SQL 2017/2019 ([MSSQL-specific configuraion guide](https://docs.fluxnova.finos.org/manual/latest/user-guide/process-engine/database/mssql-configuration/))
+* MS-SQL 2017/2019 ([MSSQL-specific configuraion guide](https://docs.fluxnova.finos.org/user-guide/process-engine/database/mssql-configuration/))
 
 To execute the process engine test suite with a certain database (e.g. PostgreSQL), you should call Maven in the 
 engine directory with
