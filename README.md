@@ -63,6 +63,8 @@ To run the tests in this repository, please see our [testing tips and tricks](TE
 
 Join the Fluxnova public mailing list by sending an email to [fluxnova+subscribe@lists.finos.org](mailto:fluxnova+subscribe@lists.finos.org).
 
+Register for the monthly Fluxnova public meeting [here](https://zoom-lfx.platform.linuxfoundation.org/meeting/98975602417?password=8a1c796a-2eba-4f71-beeb-e3ecb7eb3450&invite=true). The meeting takes place every 3rd Tuesday of the month at 10am EST.
+
 ## License
 
 Copyright 2025 FINOS
