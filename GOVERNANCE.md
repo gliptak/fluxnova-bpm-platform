@@ -4,6 +4,7 @@ This document describes the governance of the FINOS Fluxnova project. The projec
 
 Please also see our [contribution guidelines] (https://github.com/finos/fluxnova-bpm-platform/blob/main/CONTRIBUTING.md)
 
+
 ## Roles
 
 Fluxnova is a meritocratic, consensus-based community project, in so far that is possible, decision-making is done based on user consensus following open discussion on our Working Groups and issue list. No major decisions about the project’s direction, bug fixes, or features should be made in private without community involvement and participation. Discussions must begin at the earliest possible point on a topic; the community’s participation is vital during the entire decision-making process.
@@ -65,7 +66,7 @@ Contributions must abide by the contribution guidelines set out in [CONTRIBUTING
 
 ## Decision Making Process
 
-Fluxnova follows a consensus- based decision-making model:
+Fluxnova follows a consensus based decision-making model:
 
 - Preferred: All relevant Maintainer agree
 - Acceptable: Majority agrees, no strong objections
@@ -152,3 +153,4 @@ All feedback, objections and comments from contributors shall be thoroughly revi
 ## Changes to this Document
 
 This document MAY be amended by consensus of the Maintainers, see [Decision Making Process](#decision-making-process).
+
