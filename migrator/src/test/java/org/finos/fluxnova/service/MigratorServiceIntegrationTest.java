@@ -1,38 +1,47 @@
 package org.finos.fluxnova.service;
 
-import org.apache.maven.shared.invoker.Invoker;
 import org.apache.maven.shared.invoker.MavenInvocationException;
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.finos.fluxnova.util.Utils.deleteDirectoryRecursively;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MigratorServiceIntegrationTest {
 
-    String tempDir = System.getProperty("java.io.tmpdir");
+    static String tempDir = System.getProperty("java.io.tmpdir");
 
     private MigratorService migratorService;
     private String projectLocation;
     private String targetVersion = "0.0.1-SNAPSHOT";
     private String modelerVersion = "0.0.1";
-    private Invoker mockInvoker;
 
-    @BeforeEach
-    void setUp() throws IOException {
-        projectLocation = tempDir + File.separator + "test-project";
+    @BeforeAll
+    static void clear() throws IOException {
+        deleteDirectoryRecursively(Paths.get(tempDir + File.separator + "test-project"));
+        deleteDirectoryRecursively(Paths.get(tempDir + File.separator + "test-project-without-pom"));
+    }
+
+    void setUp(String folderName) throws IOException {
+        projectLocation = tempDir + File.separator + folderName;
         Files.createDirectories(Path.of(projectLocation));
-        projectLocation = tempDir + File.separator + "test-project" + File.separator;
+        projectLocation = tempDir + File.separator + folderName + File.separator;
         migratorService = new MigratorService(projectLocation, targetVersion, modelerVersion);
     }
 
     @Test
-    void testStartMethodReplacesOrgFluxnovaWithOrgFluxnova() throws IOException, XmlPullParserException, MavenInvocationException {
+    @Order(1)
+    void testStartMethodReplacesCamundaWithFluxnova() throws IOException, XmlPullParserException, MavenInvocationException {
+        setUp("test-project");
         // Create a mock project structure
         createMockProjectStructure();
 
@@ -206,6 +215,86 @@ class MigratorServiceIntegrationTest {
 
         // Verify rewrite.yml was deleted
         assertFalse(Files.exists(Path.of(projectLocation + "rewrite.yml")), "rewrite.yml should be deleted");
+
+    }
+
+    @Test
+    @Order(2)
+    void testStartMethodWithoutExistingPom() throws IOException, XmlPullParserException, MavenInvocationException {
+        setUp("test-project-without-pom");
+        // Create a mock project structure WITHOUT pom.xml
+        createMockProjectStructureWithoutPom();
+
+        // Run the migration
+        migratorService.start();
+
+        // Verify the results for no-pom scenario
+        verifyMigrationResultsWithoutOriginalPom();
+    }
+
+    private void createMockProjectStructureWithoutPom() throws IOException {
+        // Create test directory structure but skip pom.xml creation
+        Path projectPath = Paths.get(projectLocation);
+        Files.createDirectories(projectPath);
+
+        // Create sample XML files that need migration
+        Path xmlFile = projectPath.resolve("process-application.xml");
+        String camundaXmlContent = """
+                <?xml version="1.0" encoding="UTF-8"?>
+                <process-application xmlns="http://camunda.org/schema/1.0/ProcessApplication"
+                                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <process-archive name="invoice-process">
+                        <process-engine>default</process-engine>
+                        <properties>
+                            <property name="isDeleteUponUndeploy">false</property>
+                        </properties>
+                    </process-archive>
+                </process-application>
+                """;
+        Files.writeString(xmlFile, camundaXmlContent);
+
+        // Create additional test files if needed
+        Path bpmnFile = projectPath.resolve("sample-process.bpmn");
+        String bpmnContent = """
+                <?xml version="1.0" encoding="UTF-8"?>
+                <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                             xmlns:camunda="http://camunda.org/schema/1.0/bpmn">
+                    <process id="sample-process" isExecutable="true">
+                        <startEvent id="start"/>
+                    </process>
+                </definitions>
+                """;
+        Files.writeString(bpmnFile, bpmnContent);
+
+        // Ensure no pom.xml exists
+        Path pomPath = projectPath.resolve("pom.xml");
+        assertFalse(Files.exists(pomPath));
+    }
+
+    private void verifyMigrationResultsWithoutOriginalPom() throws IOException {
+        Path projectPath = Paths.get(projectLocation);
+
+        // Verify XML files were migrated (check for Fluxnova namespace)
+        Path xmlFile = projectPath.resolve("process-application.xml");
+        assertTrue(Files.exists(xmlFile), "XML file should exist after migration");
+
+        String migratedContent = Files.readString(xmlFile);
+        assertTrue(migratedContent.contains("http://www.fluxnova.finos.org/schema/1.0/ProcessApplication"),
+                "Migrated content should contain Fluxnova namespace");
+        assertFalse(migratedContent.contains("http://camunda.org/schema/1.0/ProcessApplication"),
+                "Migrated content should not contain Camunda namespace");
+
+
+        // Verify BPMN files were processed
+        Path bpmnFile = projectPath.resolve("sample-process.bpmn");
+        if (Files.exists(bpmnFile)) {
+            String bpmnContent = Files.readString(bpmnFile);
+            // Add assertions for BPMN transformations if applicable
+        }
+
+        // Verify rewrite.yml was cleaned up
+        Path rewriteYmlPath = projectPath.resolve("rewrite.yml");
+        assertFalse(Files.exists(rewriteYmlPath), "rewrite.yml should be cleaned up");
 
     }
 

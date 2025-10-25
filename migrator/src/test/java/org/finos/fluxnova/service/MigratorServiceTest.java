@@ -3,7 +3,7 @@ package org.finos.fluxnova.service;
 import org.apache.maven.model.*;
 import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 import org.apache.maven.model.io.xpp3.MavenXpp3Writer;
-import org.apache.maven.shared.invoker.*;
+import org.apache.maven.shared.invoker.Invoker;
 import org.codehaus.plexus.util.xml.Xpp3Dom;
 import org.finos.fluxnova.Migrator;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,13 +13,18 @@ import org.mockito.Mock;
 import org.mockito.MockedStatic;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
+import static org.finos.fluxnova.util.Utils.deleteDirectoryRecursively;
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.mockStatic;
 
 @ExtendWith(MockitoExtension.class)
 class MigratorServiceTest {
@@ -293,4 +298,71 @@ class MigratorServiceTest {
         Files.deleteIfExists(decisionDmn);
     }
 
+    @Test
+    void testCreateMinimalPom() throws IOException {
+        // Arrange
+        Path testDir = Path.of(projectLocation + File.separator + "testFolder");
+        File pomFile = testDir.resolve("pom.xml").toFile();
+        deleteDirectoryRecursively(testDir);
+        // Ensure the directory doesn't exist initially
+        assertFalse(Files.exists(testDir), "Test directory should not exist initially");
+
+        // Act - Call the method directly (no reflection needed)
+        migratorService.createMinimalPom(pomFile);
+
+        // Assert
+        // Verify that parent directory was created
+        assertTrue(Files.exists(testDir), "Parent directory should be created");
+
+        // Verify that pom.xml file was created
+        assertTrue(Files.exists(pomFile.toPath()), "pom.xml file should be created");
+
+        // Verify file content
+        String pomContent = Files.readString(pomFile.toPath());
+
+        // Check XML declaration and project structure
+        assertTrue(pomContent.contains("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"),
+                "Should contain XML declaration");
+        assertTrue(pomContent.contains("<project xmlns=\"http://maven.apache.org/POM/4.0.0\""),
+                "Should contain Maven project namespace");
+
+        // Check project coordinates
+        assertTrue(pomContent.contains("<groupId>org.finos.fluxnova</groupId>"),
+                "Should contain correct groupId");
+        assertTrue(pomContent.contains("<artifactId>migration-temp</artifactId>"),
+                "Should contain correct artifactId");
+        assertTrue(pomContent.contains("<version>1.0.0</version>"),
+                "Should contain correct version");
+        assertTrue(pomContent.contains("<packaging>pom</packaging>"),
+                "Should contain pom packaging");
+
+        // Check project metadata
+        assertTrue(pomContent.contains("<name>Temporary Migration Project</name>"),
+                "Should contain project name");
+        assertTrue(pomContent.contains("<description>Temporary project for OpenRewrite migration from Camunda to Fluxnova</description>"),
+                "Should contain project description");
+
+        // Check build section
+        assertTrue(pomContent.contains("<build>"), "Should contain build section");
+        assertTrue(pomContent.contains("<plugins>"), "Should contain plugins section");
+        assertTrue(pomContent.contains("<!-- OpenRewrite plugin will be added by prepare() method -->"),
+                "Should contain OpenRewrite plugin comment");
+
+        // Verify it's valid XML by parsing it
+        assertDoesNotThrow(() -> {
+            MavenXpp3Reader reader = new MavenXpp3Reader();
+            try (StringReader stringReader = new StringReader(pomContent)) {
+                Model model = reader.read(stringReader);
+
+                // Additional model-level assertions
+                assertEquals("org.finos.fluxnova", model.getGroupId());
+                assertEquals("migration-temp", model.getArtifactId());
+                assertEquals("1.0.0", model.getVersion());
+                assertEquals("pom", model.getPackaging());
+                assertEquals("Temporary Migration Project", model.getName());
+                assertNotNull(model.getBuild());
+                assertNotNull(model.getBuild().getPlugins());
+            }
+        }, "Generated POM should be valid XML and parseable by Maven");
+    }
 }
