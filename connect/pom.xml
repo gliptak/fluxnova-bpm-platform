@@ -30,6 +30,7 @@
     <module>core</module>
     <module>http-client</module>
     <module>soap-http-client</module>
+    <module>openai-client</module>
     <module>connectors-all</module>
   </modules>
 
